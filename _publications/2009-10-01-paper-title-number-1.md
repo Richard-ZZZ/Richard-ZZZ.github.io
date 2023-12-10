@@ -12,4 +12,4 @@ This paper is about the number 1. The number 2 is left for future work.
 
 [Download paper here](http://academicpages.github.io/files/Inverse_Reinforcement_Learning_under_Neural_Network_Parameterization__Finite_Time_Algorithms_and_Global_Optimality.pdf)
 
-Authors: Ruijia Zhang, You. (2009).
+Authors: **Ruijia Zhang**, Siliang Zeng, Chenliang Li, Mingyi Hong and Alfredo Garcia. (2009).
