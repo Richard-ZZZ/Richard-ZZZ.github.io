@@ -12,6 +12,6 @@ I'll receive my Bachelor of Science in Mathematics and Applied Mathematics from 
 
 I am very fortunate to be advised by [Prof. Yin Zhang](https://www.cmor-faculty.rice.edu/~zhang/) and [Prof. Jianhua Huang](https://web.stat.tamu.edu/~jianhua/) from [School of Data Science](https://sds.cuhk.edu.cn/en), CUHKSZ. Previously, I spent a fantastic summer doing research under the supervision of [Prof. Mingyi Hong](https://people.ece.umn.edu/~mhong/mingyi.html) from the [University of Minnesota](https://twin-cities.umn.edu/) and [Prof. Alfredo Garcia](https://engineering.tamu.edu/industrial/profiles/garcia-alfredo.html) from the [Texas A&M University](https://www.tamu.edu/index.html). 
 
-You can find my CV here: [XX's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
+You can find my CV here: [Ruijia's Curriculum Vitae](../assets/Ruijia_Zhang_CV.pdf).
 
-[Email](mailto:XX@stu.pku.edu.cn)
+[Email:ruijiazhang@link.cuhk.edu.cn](mailto:ruijiazhang@link.cuhk.edu.cn)
