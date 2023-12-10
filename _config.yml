@@ -83,11 +83,12 @@ author:
   name             : "Ruijia Zhang"
   avatar           : "new.png"
   bio              : "Learn to optimize and then optimize your learning"
-  location         : "Meishan/Shenzhen/Munich"
+  
+  location         : "Meishan/Shenzhen"
   # employer         :
   # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   # googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            : "ruijiazhang@link.cuhk.edu.cn"
+  email            :  "ruijiazhang@link.cuhk.edu.cn"
   # researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   # uri              :
   # bitbucket        :
@@ -103,7 +104,7 @@ author:
   # impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   # lastfm           :
   LinkedIn         : "www.linkedin.com/in/ruijiazhang"
-  orcid            : "http://orcid.org/yourorcidurl"
+  # orcid            : "http://orcid.org/yourorcidurl"
   # pinterest        :
   # soundcloud       :
   # stackoverflow    : # http://stackoverflow.com/users/123456/username
