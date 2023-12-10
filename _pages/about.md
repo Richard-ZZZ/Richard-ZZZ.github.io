@@ -14,6 +14,7 @@ I am very fortunate to be advised by [Prof. Yin Zhang](https://www.cmor-faculty.
 
 
 You can find my CV here: [Ruijia's Curriculum Vitae](../assets/Ruijia_Zhang_CV.pdf).
-<span style="color:red">!</span><span style="color:red">!</span><span style="color:red">!</span> I'm actively looking for a Ph.D. position starting from 2024 Fall. If you are interested, feel free to contact me.
+
+**<span style="color:red">!</span>****<span style="color:red">!</span>****<span style="color:red">!</span>**I'm actively looking for a Ph.D. position starting from 2024 Fall. If you are interested, feel free to contact me.
 
 [Email:ruijiazhang@link.cuhk.edu.cn](mailto:ruijiazhang@link.cuhk.edu.cn)
