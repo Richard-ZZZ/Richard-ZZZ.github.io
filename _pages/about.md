@@ -1,6 +1,6 @@
-![image](https://github.com/Richard-ZZZ/Richard-ZZZ.github.io/assets/80209316/efb526e7-53ae-4463-8331-ff84fece51b5)---
+---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
