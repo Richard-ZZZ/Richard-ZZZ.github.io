@@ -11,30 +11,38 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Math and Applied Math, The Chinese University of Hong Kong, Shenzhen 2024 (expected)
 
-Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
+Research experience
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+*  Winter 2023: Research Intern
+  * King Abdullah University of Science and Technology
+  * Topics: Differential Private Nonconvex Strongly Concave Minimax Optimization
+  * Supervisor: Professor Di Wang
+
+* Summer 2023: Research Assistant
+  * The University of Minnesota and Texas A&M University
+  * Topics: Inverse Reinforcement Learning Theory and Bi-level Optimization
+  * Supervisor: Professor Mingyi Hong and Professor Alfredo Garcia
+
+* Spring 2023: Research Assistant
+  * The Chinese University of Hong Kong, Shenzhen
+  * Topics: Low-rank Tensor Decomposition and Signal Processing
+  * Advisor: Professor Yin Zhang, SIAM Fellow
+
+* Spring 2022: Research Assistant
+  * The Chinese University of Hong Kong, Shenzhen
+  * Topics: Post-Nonlinear Bivariate Causal Discovery
+  * Advisor: Professor Yin Feng
+
+Project experience
+======
+*  Fall 2022: Research Intern
+  * The Chinese University of Hong Kong, Shenzhen
+  * Topics: Maritime Trade Route Prognostication
+  * Supervisor: Professor Jianhua Huang
+
 
 Publications
 ======
@@ -42,18 +50,19 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+Skills
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
+* Languages: Mandarin (Native), English (Proficient), German (Basic)
+* Programming Skills: Python (Pytorch, CVXPY, Gurobi), MATLAB, R, Java
+
 Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+Leadership and Involvement
 ======
-* Currently signed in to 43 different slack teams
+* Volunteering: Worked as a media journalist in the 2026 FIFA World Cup Qualifiers
+
+* Leadership: Organized and judged the 2021 CUHK(SZ) British Parliament novice debate competition
