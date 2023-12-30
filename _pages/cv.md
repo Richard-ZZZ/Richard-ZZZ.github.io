@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* B.S. in Math and Applied Math, The Chinese University of Hong Kong, Shenzhen 2024 (expected)
+* B.S. in Applied Math, The Chinese University of Hong Kong, Shenzhen 2024 (expected)
 
 
 Research experience
