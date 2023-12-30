@@ -1,7 +1,5 @@
 ---
 title: "Understanding Inverse Reinforcement Learning under Overparameterization: Finite-Time Algorithms and Global Optimality"
-：permalink: /publication/2023-10-01-paper-title-number-1
-：date: 2023-10-01
 ：paperurl: 'http://Richard-ZZZ.github.io/files/Understanding_Inverse_Reinforcement_Learning_under_Overparameterization.pdf'
 ---
 
