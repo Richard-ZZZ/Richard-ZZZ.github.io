@@ -20,29 +20,29 @@ Research experience
 * Winter 2023: Research Intern
   * King Abdullah University of Science and Technology
   * Topics: Differential Private Nonconvex Strongly Concave Minimax Optimization
-  * Supervisor: Professor Di Wang
+  * Supervisor: Assistant Professor [Di Wang](https://shao3wangdi.github.io/)
 
 * Summer 2023: Research Assistant
   * The University of Minnesota and Texas A&M University
   * Topics: Inverse Reinforcement Learning Theory and Bi-level Optimization
-  * Supervisor: Professor Mingyi Hong and Professor Alfredo Garcia
+  * Supervisor: Associate Professor [Mingyi Hong](https://people.ece.umn.edu/~mhong/mingyi.html) and Professor [Alfredo Garcia](https://engineering.tamu.edu/industrial/profiles/garcia-alfredo.html)
 
 * Spring 2023: Research Assistant
   * The Chinese University of Hong Kong, Shenzhen
   * Topics: Low-rank Tensor Decomposition and Signal Processing
-  * Advisor: Professor Yin Zhang, SIAM Fellow
+  * Advisor: Professor [Yin Zhang](https://www.cmor-faculty.rice.edu/~zhang/), SIAM Fellow
 
 * Spring 2022: Research Assistant
   * The Chinese University of Hong Kong, Shenzhen
   * Topics: Post-Nonlinear Bivariate Causal Discovery
-  * Advisor: Professor Yin Feng
+  * Advisor: Assistant Professor [Feng Yin](https://blsp-group.github.io/)
 
 Project experience
 ======
 *  Fall 2022: Research Intern
   * The Chinese University of Hong Kong, Shenzhen
   * Topics: Maritime Trade Route Prognostication
-  * Supervisor: Professor Jianhua Huang
+  * Supervisor: Professor [Jianhua Huang](https://web.stat.tamu.edu/~jianhua/)
 
 
 Publications
