@@ -17,7 +17,7 @@ Education
 Research experience
 ======
 
-*  Winter 2023: Research Intern
+* Winter 2023: Research Intern
   * King Abdullah University of Science and Technology
   * Topics: Differential Private Nonconvex Strongly Concave Minimax Optimization
   * Supervisor: Professor Di Wang
