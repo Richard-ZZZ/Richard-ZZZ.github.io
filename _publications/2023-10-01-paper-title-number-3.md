@@ -6,4 +6,4 @@ citation: '**Ruijia Zhang**, Siliang Zeng, Chenliang Li, Mingyi Hong, and Alfred
 
 [Download paper here](https://richard-zzz.github.io/files/AISTATS2025__Copy_.pdf)
 
-Authors: **Ruijia Zhang**, Siliang Zeng, Chenliang Li, Mingyi Hong and Alfredo Garcia. (2023).
+Authors: **Ruijia Zhang**, Siliang Zeng, Chenliang Li, Mingyi Hong and Alfredo Garcia. (2024).
