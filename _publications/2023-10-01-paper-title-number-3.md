@@ -1,9 +1,9 @@
 ---
-title: "Understanding Inverse Reinforcement Learning under Overparameterization: Finite-Time Algorithms and Global Optimality"
-paperurl: 'http://Richard-ZZZ.github.io/files/Understanding_Inverse_Reinforcement_Learning_under_Overparameterization.pdf'
+title: "Understanding Inverse Reinforcement Learning under Overparameterization: Non-Asymptotic Analysis and Global Optimality"
+paperurl: 'https://richard-zzz.github.io/files/AISTATS2025__Copy_.pdf'
 citation: '**Ruijia Zhang**, Siliang Zeng, Chenliang Li, Mingyi Hong, and Alfredo Garcia.'
 ---
 
-[Download paper here](http://Richard-ZZZ.github.io/files/Understanding_Inverse_Reinforcement_Learning_under_Overparameterization.pdf)
+[Download paper here](https://richard-zzz.github.io/files/AISTATS2025__Copy_.pdf)
 
 Authors: **Ruijia Zhang**, Siliang Zeng, Chenliang Li, Mingyi Hong and Alfredo Garcia. (2023).
