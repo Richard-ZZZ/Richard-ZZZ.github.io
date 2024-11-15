@@ -16,7 +16,7 @@ I'm also very privileged to work closely with [Prof. Yanxun Xu](https://www.ams.
 During my undergraduate years, I was very fortunate to be advised by [Prof. Yin Zhang](https://www.cmor-faculty.rice.edu/~zhang/) and [Prof. Jianhua Huang](https://web.stat.tamu.edu/~jianhua/) from [School of Data Science](https://sds.cuhk.edu.cn/en), CUHK(SZ). Previously, I spent a fantastic summer doing research under the joint supervision of [Prof. Mingyi Hong](https://people.ece.umn.edu/~mhong/mingyi.html) from the [University of Minnesota](https://twin-cities.umn.edu/) and [Prof. Alfredo Garcia](https://engineering.tamu.edu/industrial/profiles/garcia-alfredo.html) from the [Texas A&M University](https://www.tamu.edu/index.html). I was once a visiting student in [Prof. Di Wang](https://shao3wangdi.github.io/)'s lab at the [King Abdullah University of Science and Technology (KAUST)](https://www.kaust.edu.sa/en/). 
 
 
-You can find my CV here: [Ruijia's Curriculum Vitae](../assets/Ruijia_Zhang_CV.pdf).
+You can find my CV here: [Ruijia's Curriculum Vitae](../assets/Ruijia_Zhang_CV(1).pdf).
 
 **<span style="color:red">!</span>****<span style="color:red">!</span>****<span style="color:red">!</span>**I'm actively looking for research collaborations both in industry and academia. If you are interested, feel free to contact me.
 
