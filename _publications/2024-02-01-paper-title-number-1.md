@@ -1,9 +1,10 @@
 ---
-title: "DoubleDIFF: Differential Private Nonconvex Strongly Concave Minimax Optimization
-via Gradient Differences"
-citation: '**Ruijia Zhang** and Di Wang'
+title: "Improved Rates of Differential Private Nonconvex Strongly Concave Minimax Optimization via Gra-
+dient Differences"
+paperurl: 'https://richard-zzz.github.io/files/AAAI_2025_DP_Minimax.pdf'
+citation: '**Ruijia Zhang**, Di Wang.'
 ---
 
-Under Preparation
+[Download paper here](https://richard-zzz.github.io/files/AAAI_2025_DP_Minimax.pdf)
 
-Authors: **Ruijia Zhang**, Di Wang.
+Authors: **Ruijia Zhang**, Di Wang. (2024).
