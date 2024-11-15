@@ -81,14 +81,14 @@ analytics:
 # Site Author
 author:
   name             : "Ruijia Zhang"
-  avatar           : "new.png"
+  avatar           : "converted_image.png"
   bio              : "Learn to optimize and then optimize your learning"
   
-  location         : "Meishan/Shenzhen"
+  location         : "Baltimore"
   # employer         :
   # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   # googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :  "ruijiazhang@link.cuhk.edu.cn"
+  email            :  "rzhan127@jhu.edu"
   # researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   # uri              :
   # bitbucket        :
