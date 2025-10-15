@@ -114,7 +114,8 @@ My research is broadly motivated by the question of how to make reliable and rob
 - **Random Matrix Makes LoRA More Efficient**.   
   **Ruijia Zhang**, Jiacheng Zhu, Laixi Shi.
   
-- **Learning Optimal Robust Policies under Observational Data with Causal Transport**. *To be submitted to Operations Research*.  
+- **Learning Optimal Robust Policies under Observational Data with Causal Transport**.
+- *To be submitted to Operations Research*.  
   **Ruijia Zhang**, Luhao Zhang, Michael Lingzhi Li.
 
 # Teaching
