@@ -89,7 +89,7 @@ My research is broadly motivated by the question of how to make reliable and rob
     <a class="pub-link" href="https://arxiv.org/abs/2506.20406">
       POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes
     </a><br>
-    <span class="venue">Under Review at Journal of the American Statistical Association (JASA)</span><br>
+    <span class="venue">Major Revision at Journal of the American Statistical Association (JASA)</span><br>
     <span class="authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu.</span>
   </li>
 
