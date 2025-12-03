@@ -120,6 +120,7 @@ My research is broadly motivated by the question of how to make reliable and rob
 
 # Teaching
 **Graduate Teaching Assistant, JHU**
+- EN.553.639 Time Series Analysis (Spring 2026)
 - EN.553.744 Data Science Methods for Large-Scale Graphs (Spring 2025)
 - EN.553.642 Investment Science (Fall 2024&2025)
 
