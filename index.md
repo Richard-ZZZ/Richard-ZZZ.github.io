@@ -112,7 +112,7 @@ My research is broadly motivated by the question of how to make reliable and rob
 
 ### Ongoing Works
 - **Decoupling from the Spectrum: A New Paradigm for RL Parameter Efficient Fine-Tuning**.
-  *In Collaboration with Meta Super Intelligence Team and xAI  
+  *In Collaboration with Meta Super Intelligence Team and xAI*.  
   **Ruijia Zhang**, Jiacheng Zhu, Andy Su, Hanqing Zhu, Laixi Shi. 
   
 - **Learning Optimal Robust Policies under Observational Data with Causal Transport**.
