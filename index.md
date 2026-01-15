@@ -111,8 +111,9 @@ My research is broadly motivated by the question of how to make reliable and rob
 </ul>
 
 ### Ongoing Works
-- **Random Matrix Makes LoRA More Efficient**.   
-  **Ruijia Zhang**, Jiacheng Zhu, Laixi Shi.
+- **Decoupling from the Spectrum: A New Paradigm for RL Parameter Efficient Fine-Tuning**.
+  *In Collaboration with Meta Super Intelligence Team and xAI  
+  **Ruijia Zhang**, Jiacheng Zhu, Andy Su, Hanqing Zhu, Laixi Shi. 
   
 - **Learning Optimal Robust Policies under Observational Data with Causal Transport**.
   *To be submitted to Operations Research*.  
@@ -129,6 +130,7 @@ My research is broadly motivated by the question of how to make reliable and rob
 - MAT3007 Optimization (Fall 2023)
 
 # Awards
+- ASA Nonparametric Statistics Section Best Student Paper Awards for the Joint Statistical Meetings (JSM) 2026
 - International Conference on Continuous Optimization (ICCOPT) 2025 Student Grant 
 
 # Education
