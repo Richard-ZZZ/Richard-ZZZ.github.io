@@ -130,7 +130,7 @@ My research is broadly motivated by the question of how to make reliable and rob
 - MAT2002 Ordinary Differential Equations (Spring 2024)
 - MAT3007 Optimization (Fall 2023)
 
-# Awards
+# Awards :trophy:
 - ASA Nonparametric Statistics Section Best Student Paper Awards for the Joint Statistical Meetings (JSM) 2026
 - International Conference on Continuous Optimization (ICCOPT) 2025 Student Grant 
 
