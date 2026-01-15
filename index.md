@@ -90,7 +90,7 @@ My research is broadly motivated by the question of how to make reliable and rob
       POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes
     </a><br>
     <span class="venue">Major Revision at Journal of the American Statistical Association (JASA)</span><br>
-    <span class="venue">ASA Nonparametric Statistics Section Best Student Paper Awards for the Joint Statistical Meetings (JSM) 2026</span><br>
+    <span class="venue"> :trophy: ASA Nonparametric Statistics Section Best Student Paper Awards for the Joint Statistical Meetings (JSM) 2026</span><br>
     <span class="authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu.</span>
   </li>
 
