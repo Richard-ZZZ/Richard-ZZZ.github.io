@@ -6,7 +6,7 @@ title: "Ruijia Zhang"
 <div style="display:flex; align-items:center; gap:30px;">
 
   <!-- 左边头像 -->
-  <img src="/assets/img/IMG_7756.JPG" alt="Ruijia Zhang" width="180" style="border-radius:8px;">
+  <img src="/assets/img/IMG_7151.JPG" alt="Ruijia Zhang" width="180" style="border-radius:8px;">
 
   <!-- 右边文字 -->
   <div>
