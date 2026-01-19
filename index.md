@@ -5,24 +5,21 @@ title: "Ruijia Zhang"
 
 <div style="display:flex; align-items:center; gap:30px;">
 
-  <!-- 左边头像 -->
   <img src="/assets/img/IMG_7151.JPG" alt="Ruijia Zhang" width="180" style="border-radius:8px;">
 
-  <!-- 右边文字 -->
   <div>
     <h1>Ruijia Zhang</h1>
     <p>PhD Candidate, Applied Mathematics & Statistics<br>
     Johns Hopkins University, Baltimore, MD, USA</p>
-    <p>📧 rzhan127@jh.edu   🌐 <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AH8HC4xKcj1WPYEBl4BOKBJSNUDnuIYeSvYlkX7-dQ4kBPxmvPHlivRQCNgLqubQLr0uDDR6fpXjlDxT8F1wyw&user=gBhh93cAAAAJ">Google Scholar</a></p>
+    <p>📧 rzhan127@jh.edu    🌐 <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AH8HC4xKcj1WPYEBl4BOKBJSNUDnuIYeSvYlkX7-dQ4kBPxmvPHlivRQCNgLqubQLr0uDDR6fpXjlDxT8F1wyw&user=gBhh93cAAAAJ">Google Scholar</a></p>
   </div>
 
 </div>
 
-<!-- Nav -->
 <style>
   .navbar{
     display:grid;
-    grid-template-columns: repeat(4, minmax(0,1fr)); /* 四个按钮均分整行 */
+    grid-template-columns: repeat(4, minmax(0,1fr));
     gap:16px;
     margin:20px 0 28px;
   }
@@ -30,11 +27,11 @@ title: "Ruijia Zhang"
     display:block;
     text-align:center;
     padding:14px 0;
-    border:2px solid #fcd34d;       /* 金黄描边 */
+    border:2px solid #fcd34d;
     border-radius:12px;
-    background:#fef3c7;              /* 浅黄底 */
-    color:#b45309 !important;        /* 深琥珀字色 */
-    text-decoration:none !important; /* 去掉下划线 */
+    background:#fef3c7;
+    color:#b45309 !important;
+    text-decoration:none !important;
     font-weight:700;
     font-size:1.05rem;
     line-height:1;
@@ -45,7 +42,6 @@ title: "Ruijia Zhang"
     transform:translateY(-2px);
     box-shadow:0 4px 12px rgba(249,115,22,.15);
   }
-  /* 小屏自适应：手机上两列 */
   @media (max-width: 640px){
     .navbar{ grid-template-columns: repeat(2, minmax(0,1fr)); }
   }
@@ -67,15 +63,14 @@ My research is broadly motivated by the question of how to make reliable and rob
 ### Publications
 
 <style>
-  /* 只作用于 Publications */
   main .pubs a.pub-link,
   main .pubs a.pub-link:visited{
-    color:#3399ff !important;        /* 浅蓝 */
+    color:#3399ff !important;
     text-decoration:none !important;
     font-weight:700;
   }
   main .pubs a.pub-link:hover{
-    color:#0066cc !important;        /* 悬停稍深 */
+    color:#0066cc !important;
     text-decoration:underline !important;
   }
   main .pubs{ margin: 8px 0 0; padding-left: 1.2rem; }
@@ -140,7 +135,7 @@ My research is broadly motivated by the question of how to make reliable and rob
   .edu-timeline {
     margin: 20px 0;
     padding-left: 25px;
-    border-left: 3px solid #fbbf24; /* 金黄色竖线 */
+    border-left: 3px solid #fbbf24;
   }
   .edu-item {
     position: relative;
@@ -195,8 +190,6 @@ My research is broadly motivated by the question of how to make reliable and rob
   </div>
 
 </div>
-
-
 
 <hr>
 <div class="small">Last updated: August 22, 2025</div>
