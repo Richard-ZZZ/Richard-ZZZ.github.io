@@ -60,7 +60,7 @@ title: "Ruijia Zhang"
 
 # About me
 I am a PhD candidate in the **Department of Applied Mathematics and Statistics** at **Johns Hopkins University**, starting in August 2024.  
-My research is broadly motivated by the question of how to make reliable and robust decisions under uncertainty. I work on problems at the intersection of applied probability, optimization, and reinforcement learning. My recent interests focus on **LLM Alignment** and **Diffusion Models**.
+My research is broadly motivated by the question of how to make reliable and robust decisions under uncertainty. I work on problems at the intersection of applied probability, optimization, and reinforcement learning. My recent interests focus on **LLM Fine-tuning** and **Distributionally Robust Optimization**.
 
 # Research
 
