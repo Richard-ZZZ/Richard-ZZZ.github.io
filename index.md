@@ -82,7 +82,7 @@ My research is broadly motivated by the question of how to make reliable and rob
 <ul class="pubs">
    <li>
     <a class="pub-link" href="https://richard-zzz.github.io/papers/ICML2026%20_Camera_Ready.pdf">
-      Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in Reinforcement Learning
+      Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR
     </a><br>
     <span class="venue">ICML 2026</span><br>
     <span class="venue">Collaborated with Meta Super Intelligence Team and xAI</span><br>
