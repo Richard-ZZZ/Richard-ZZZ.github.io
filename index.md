@@ -81,7 +81,7 @@ My research is broadly motivated by the question of how to make reliable and rob
 
 <ul class="pubs">
    <li>
-    <a class="pub-link" href="https://richard-zzz.github.io/papers/lora-rlvr-orthonormal-init.pdf">
+    <a class="pub-link" href="https://richard-zzz.github.io/papers/ICML2026%20_Camera_Ready.pdf">
       Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in Reinforcement Learning
     </a><br>
     <span class="venue">ICML 2026</span><br>
