@@ -66,23 +66,99 @@ if (!canvasFish) {
       ctx.rotate(this.rotation);
       ctx.globalAlpha = this.opacity;
 
-      // Draw 5-petal cherry blossom
-      ctx.fillStyle = this.color;
-      for (let i = 0; i < 5; i++) {
-        const angle = (i * Math.PI * 2) / 5;
+      // Draw 5 realistic cherry blossom petals with bezier curves
+      const petalCount = 5;
+      const petalLength = this.size;
+      const petalWidth = this.size * 0.85;
+
+      for (let i = 0; i < petalCount; i++) {
+        const angle = (i * Math.PI * 2) / petalCount - Math.PI / 2;
+
         ctx.save();
         ctx.rotate(angle);
+
+        // Petal with bezier curve (heart-shaped with notch at tip)
+        const gradient = ctx.createRadialGradient(0, petalLength * 0.3, 0, 0, petalLength * 0.3, petalLength);
+        if (this.color === '#FFB7C5') {
+          gradient.addColorStop(0, '#FFD7E0');
+          gradient.addColorStop(0.6, '#FFB7C5');
+          gradient.addColorStop(1, '#FFa0b5');
+        } else {
+          gradient.addColorStop(0, '#FFFFFF');
+          gradient.addColorStop(0.6, '#FFF5F0');
+          gradient.addColorStop(1, '#FFE8DC');
+        }
+        ctx.fillStyle = gradient;
+
         ctx.beginPath();
-        ctx.ellipse(this.size * 0.4, 0, this.size * 0.4, this.size * 0.6, 0, 0, Math.PI * 2);
+        // Start at base
+        ctx.moveTo(0, 0);
+
+        // Left side of petal - curves outward then inward
+        ctx.bezierCurveTo(
+          -petalWidth * 0.35, petalLength * 0.2,  // control point 1
+          -petalWidth * 0.45, petalLength * 0.5,  // control point 2
+          -petalWidth * 0.15, petalLength * 0.85  // end at near-tip left
+        );
+
+        // Left side of notch
+        ctx.bezierCurveTo(
+          -petalWidth * 0.08, petalLength * 0.92,
+          -petalWidth * 0.02, petalLength * 0.98,
+          0, petalLength  // tip center (notch bottom)
+        );
+
+        // Right side of notch
+        ctx.bezierCurveTo(
+          petalWidth * 0.02, petalLength * 0.98,
+          petalWidth * 0.08, petalLength * 0.92,
+          petalWidth * 0.15, petalLength * 0.85  // near-tip right
+        );
+
+        // Right side of petal - mirror of left
+        ctx.bezierCurveTo(
+          petalWidth * 0.45, petalLength * 0.5,
+          petalWidth * 0.35, petalLength * 0.2,
+          0, 0  // back to base
+        );
+
+        ctx.closePath();
         ctx.fill();
+
+        // Add subtle vein in center of petal
+        ctx.strokeStyle = this.color === '#FFB7C5' ? 'rgba(255, 160, 181, 0.3)' : 'rgba(255, 232, 220, 0.4)';
+        ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(0, petalLength * 0.1);
+        ctx.bezierCurveTo(
+          0, petalLength * 0.4,
+          0, petalLength * 0.7,
+          0, petalLength * 0.92
+        );
+        ctx.stroke();
+
         ctx.restore();
       }
 
-      // Center dot
-      ctx.fillStyle = '#FFE5CC';
+      // Center stamen (pistil + stamens)
+      const centerGrad = ctx.createRadialGradient(0, 0, 0, 0, 0, this.size * 0.25);
+      centerGrad.addColorStop(0, '#FFF9E6');
+      centerGrad.addColorStop(0.6, '#FFE5B4');
+      centerGrad.addColorStop(1, '#FFD98E');
+      ctx.fillStyle = centerGrad;
       ctx.beginPath();
-      ctx.arc(0, 0, this.size * 0.15, 0, Math.PI * 2);
+      ctx.arc(0, 0, this.size * 0.18, 0, Math.PI * 2);
       ctx.fill();
+
+      // Tiny stamens around center
+      ctx.fillStyle = '#E6C68A';
+      for (let i = 0; i < 8; i++) {
+        const a = (i / 8) * Math.PI * 2;
+        const r = this.size * 0.24;
+        ctx.beginPath();
+        ctx.arc(Math.cos(a) * r, Math.sin(a) * r, this.size * 0.035, 0, Math.PI * 2);
+        ctx.fill();
+      }
 
       ctx.restore();
     }
