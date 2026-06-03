@@ -1,6 +1,6 @@
 /* ============================================================
    Loss-landscape ripples + fish
-   - water canvas: moving contour lines from a Gaussian loss surface
+   - water canvas: fixed loss-landscape contours drawn like ripples
    - fish canvas: follow-the-leader fish lightly guided by -∇f
    ============================================================ */
 
@@ -47,22 +47,16 @@ if (!canvasWater || !canvasFish) {
       bumps.push({
         cx0: margin + Math.random() * Math.max(1, W - margin * 2),
         cy0: margin + Math.random() * Math.max(1, H - margin * 2),
-        ax: 30 + Math.random() * 80,
-        ay: 25 + Math.random() * 65,
-        wx: 0.000025 + Math.random() * 0.000045,
-        wy: 0.000020 + Math.random() * 0.000040,
-        phx: Math.random() * Math.PI * 2,
-        phy: Math.random() * Math.PI * 2,
         sigma: 130 + Math.random() * 120,
         amp: (isWell ? -1 : 1) * (0.65 + Math.random() * 0.55),
       });
     }
   }
 
-  function refreshLandscape(t) {
+  function refreshLandscape() {
     bumpCache = bumps.map((b) => ({
-      cx: b.cx0 + Math.cos(t * b.wx + b.phx) * b.ax,
-      cy: b.cy0 + Math.sin(t * b.wy + b.phy) * b.ay,
+      cx: b.cx0,
+      cy: b.cy0,
       sigma2: b.sigma * b.sigma,
       amp: b.amp,
     }));
@@ -125,8 +119,8 @@ if (!canvasWater || !canvasFish) {
       for (let i = 0; i < cols; i++) {
         const x = i * cell;
         const y = j * cell;
-        const shimmer = 0.018 * Math.sin(x * 0.018 + t * 0.0013) * Math.cos(y * 0.014 - t * 0.0011);
-        grid[j * cols + i] = field(x, y) + shimmer;
+        const texture = 0.003 * Math.sin(x * 0.018) * Math.cos(y * 0.014);
+        grid[j * cols + i] = field(x, y) + texture;
       }
     }
 
@@ -380,7 +374,7 @@ if (!canvasWater || !canvasFish) {
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function frame(now) {
-    refreshLandscape(now);
+    refreshLandscape();
     ctxWater.clearRect(0, 0, W, H);
     drawCaustics(now);
     drawContourRipples(now);
