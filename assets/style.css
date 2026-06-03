@@ -178,9 +178,9 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   font-family: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
 }
 
-/* ---------- Background scene (Brownian sample paths) ---------- */
+/* ---------- Background scene (aurora) ---------- */
 #scene { position: fixed; inset: 0; overflow: hidden; z-index: 0; pointer-events: none; }
-#brownian { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+#aurora { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 680px) {
