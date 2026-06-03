@@ -44,8 +44,29 @@ if (!canvasFish) {
       this.swayFreq = 0.001 + Math.random() * 0.002;
       this.swayPhase = Math.random() * Math.PI * 2;
       this.opacity = 0.6 + Math.random() * 0.4;
-      this.color = Math.random() < 0.6 ? '#FFB7C5' : '#FFF5F0';  // soft pink or cream
+      this.color = Math.random() < 0.6 ? '#FFB7C5' : '#FFF5F0';
       this.life = 0;
+
+      // Per-flower randomness for natural variation
+      this.petalCount = Math.floor(4 + Math.random() * 3);  // 4-6 petals
+      this.petalAngles = [];  // irregular spacing
+      let angleSum = 0;
+      for (let i = 0; i < this.petalCount; i++) {
+        const irregularity = 0.7 + Math.random() * 0.6;  // 0.7x to 1.3x normal spacing
+        this.petalAngles.push(angleSum);
+        angleSum += (Math.PI * 2 / this.petalCount) * irregularity;
+      }
+      // Normalize so they wrap around 2π
+      const scale = (Math.PI * 2) / angleSum;
+      this.petalAngles = this.petalAngles.map(a => a * scale);
+
+      this.petalSizes = [];  // each petal slightly different
+      for (let i = 0; i < this.petalCount; i++) {
+        this.petalSizes.push({
+          length: 0.85 + Math.random() * 0.3,  // 85%-115% of base
+          width: 0.75 + Math.random() * 0.35,  // 75%-110% of base
+        });
+      }
     }
 
     update(t) {
@@ -66,13 +87,11 @@ if (!canvasFish) {
       ctx.rotate(this.rotation);
       ctx.globalAlpha = this.opacity;
 
-      // Draw 5 realistic cherry blossom petals with bezier curves
-      const petalCount = 5;
-      const petalLength = this.size;
-      const petalWidth = this.size * 0.85;
-
-      for (let i = 0; i < petalCount; i++) {
-        const angle = (i * Math.PI * 2) / petalCount - Math.PI / 2;
+      // Draw petals with natural variation
+      for (let i = 0; i < this.petalCount; i++) {
+        const angle = this.petalAngles[i] - Math.PI / 2;
+        const petalLength = this.size * this.petalSizes[i].length;
+        const petalWidth = this.size * 0.85 * this.petalSizes[i].width;
 
         ctx.save();
         ctx.rotate(angle);
@@ -91,35 +110,34 @@ if (!canvasFish) {
         ctx.fillStyle = gradient;
 
         ctx.beginPath();
-        // Start at base
         ctx.moveTo(0, 0);
 
         // Left side of petal - curves outward then inward
         ctx.bezierCurveTo(
-          -petalWidth * 0.35, petalLength * 0.2,  // control point 1
-          -petalWidth * 0.45, petalLength * 0.5,  // control point 2
-          -petalWidth * 0.15, petalLength * 0.85  // end at near-tip left
+          -petalWidth * 0.35, petalLength * 0.2,
+          -petalWidth * 0.45, petalLength * 0.5,
+          -petalWidth * 0.15, petalLength * 0.85
         );
 
         // Left side of notch
         ctx.bezierCurveTo(
           -petalWidth * 0.08, petalLength * 0.92,
           -petalWidth * 0.02, petalLength * 0.98,
-          0, petalLength  // tip center (notch bottom)
+          0, petalLength
         );
 
         // Right side of notch
         ctx.bezierCurveTo(
           petalWidth * 0.02, petalLength * 0.98,
           petalWidth * 0.08, petalLength * 0.92,
-          petalWidth * 0.15, petalLength * 0.85  // near-tip right
+          petalWidth * 0.15, petalLength * 0.85
         );
 
         // Right side of petal - mirror of left
         ctx.bezierCurveTo(
           petalWidth * 0.45, petalLength * 0.5,
           petalWidth * 0.35, petalLength * 0.2,
-          0, 0  // back to base
+          0, 0
         );
 
         ctx.closePath();
@@ -150,11 +168,12 @@ if (!canvasFish) {
       ctx.arc(0, 0, this.size * 0.18, 0, Math.PI * 2);
       ctx.fill();
 
-      // Tiny stamens around center
+      // Tiny stamens around center (count matches petal count)
       ctx.fillStyle = '#E6C68A';
-      for (let i = 0; i < 8; i++) {
-        const a = (i / 8) * Math.PI * 2;
-        const r = this.size * 0.24;
+      const stamenCount = this.petalCount + 2;
+      for (let i = 0; i < stamenCount; i++) {
+        const a = (i / stamenCount) * Math.PI * 2 + Math.random() * 0.2;
+        const r = this.size * (0.22 + Math.random() * 0.05);
         ctx.beginPath();
         ctx.arc(Math.cos(a) * r, Math.sin(a) * r, this.size * 0.035, 0, Math.PI * 2);
         ctx.fill();
