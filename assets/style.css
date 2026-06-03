@@ -1,6 +1,6 @@
 /* ============================================================
    Ruijia Zhang — personal site
-   jyopari-inspired layout, warm amber accent, fish scene behind
+   jyopari-inspired layout, warm amber accent, Fuji/Yamanakako background
    ============================================================ */
 
 :root {
@@ -29,7 +29,35 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-#app { position: relative; min-height: 100svh; }
+#app {
+  position: relative;
+  min-height: 100svh;
+  isolation: isolate;
+}
+
+#app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: linear-gradient(90deg, rgba(255,254,251,0.82) 0%, rgba(255,254,251,0.55) 42%, rgba(255,254,251,0.22) 100%), url('/assets/img/fuji-yamanakako-bg.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  opacity: 0.78;
+  transform-origin: center right;
+  animation: fuji-breath 48s ease-in-out infinite alternate;
+}
+
+@keyframes fuji-breath {
+  from { transform: scale(1.01) translate3d(0, 0, 0); opacity: 0.74; }
+  to { transform: scale(1.035) translate3d(-10px, -6px, 0); opacity: 0.82; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #app::before { animation: none; }
+}
 
 /* ---------- Main column ---------- */
 .site-header {
@@ -178,11 +206,9 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   font-family: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
 }
 
-/* ---------- Background scene (fish + water) ---------- */
-#scene { position: fixed; inset: 0; overflow: hidden; z-index: 0; pointer-events: none; }
-#water, #fish { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-#water { z-index: 5; opacity: 0.85; }
-#fish  { z-index: 10; }
+/* ---------- Background image fallback ---------- */
+#scene { display: none; }
+#water, #fish { display: none; }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 680px) {
@@ -191,6 +217,5 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   .profile img { width: 100px; height: 100px; }
   .profile-meta .name { font-size: 26px; }
   .timeline li { grid-template-columns: 90px 1fr; gap: 12px; }
-  #scene { display: none; }                      /* hide fish scene on mobile */
   body { background: #faf5ec; }
 }
