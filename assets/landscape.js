@@ -171,7 +171,7 @@ if (canvas) {
     }
     step() {
       const { gx, gy } = grad(this.x, this.y);
-      const speed = 1.0;                             /* slower descent */
+      const speed = 0.6;                             /* even slower descent */
       const norm = Math.hypot(gx, gy) + 1e-6;
       this.x -= gx / norm * speed;
       this.y -= gy / norm * speed;
