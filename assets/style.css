@@ -1,124 +1,194 @@
-/* ===== Warm Amber + Black Headings (final override) ===== */
+/* ============================================================
+   Ruijia Zhang — personal site
+   jyopari-inspired layout, warm amber accent, fish scene behind
+   ============================================================ */
+
 :root {
-  /* 配色 */
-  --bg:    #FFF8E7;   /* 页面背景：淡米黄 */
-  --card:  #FFFCF5;   /* 卡片背景：浅米色（非纯白） */
-  --text:  #111827;   /* 主文字：黑色 */
-  --muted: #6b7280;   /* 次要文字：灰 */
-  --link:  #f97316;   /* 链接：橙色 */
-  --border:#fcd34d;   /* 边框：金黄 */
-  --shadow: 0 6px 20px rgba(249,115,22,.08);
-  --max:   880px;
+  --bg:        #fffefb;          /* near-white, just barely warm */
+  --text:      #111;
+  --muted:     #555;
+  --rule:      #e8e3d7;
+  --accent:    #b45309;          /* amber-700 — links + tag chips */
+  --accent-bg: #fef3c7;          /* amber-100 — chip background */
+  --accent-bd: #fcd34d;          /* amber-300 — chip border */
+  --hover:     #ff0059;          /* hot pink hover bar (jyopari move) */
+  --section:   #084089;          /* deep blue section headings */
+  --max:       56rem;
 }
 
-/* 全局 */
 * { box-sizing: border-box; }
+html, body { height: 100%; }
 body {
-  margin: 0; padding: 0;
-  font-family: ui-sans-serif, system-ui, Segoe UI, Arial, sans-serif;
-  line-height: 1.7;
+  margin: 0;
   background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+               ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app { position: relative; min-height: 100svh; }
+
+/* ---------- Main column ---------- */
+.site-header {
+  position: relative;
+  z-index: 30;
+  max-width: var(--max);
+  padding: 48px 56px 80px;
+}
+
+/* ---------- Profile row (custom div in index.md) ---------- */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+.profile img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+}
+.profile-meta { line-height: 1.45; }
+.profile-meta .name {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  margin: 0 0 4px;
+}
+.profile-meta .role { color: var(--muted); margin: 0 0 6px; }
+.profile-meta .contacts {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+.profile-meta .contacts a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--rule);
+}
+.profile-meta .contacts a:hover { border-color: var(--accent); color: var(--accent); }
+.profile-meta .contacts .sep { margin: 0 8px; color: #bbb; }
+
+/* ---------- Bio paragraph ---------- */
+.bio {
+  max-width: 70ch;
+  margin: 0 0 32px;
+  color: #1a1a1a;
+}
+.bio b, .bio strong { color: var(--text); font-weight: 600; }
+
+/* ---------- Section headings (jyopari blue, light weight) ---------- */
+h1, h2, h3 { color: var(--text); }
+h2 {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--section);
+  margin: 32px 0 12px;
+}
+h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 20px 0 8px;
   color: var(--text);
 }
 
-/* 卡片容器 */
-main {
-  max-width: var(--max);
-  margin: 2.5rem auto;
-  padding: 2rem 2.5rem;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
+p { margin: 0.7rem 0; }
+hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
+
+/* ---------- Item list (the jyopari `> [Tag] title` rows) ---------- */
+.items { display: grid; gap: 6px; margin: 6px 0 0; padding: 0; list-style: none; }
+.items li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 4px 0 4px 10px;
+  border-left: 3px solid transparent;
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
+.items li:hover { border-left-color: var(--hover); background: rgba(255,0,89,0.03); }
 
-/* 标题（全部黑色） */
-h1, h2, h3 {
-  color: var(--text) !important;  /* 强制黑色 */
-  font-weight: 800;
-  margin: 0 0 .6rem 0;
-}
-h1 { font-size: 2.2rem; margin-top: 0; }
-h2 { font-size: 1.6rem; margin-top: 1.8rem; }
-h3 { font-size: 1.2rem; margin-top: 1.2rem; font-weight: 700; }
-
-/* 正文、列表、分隔线 */
-p { margin: .9rem 0; }
-ul { padding-left: 1.15rem; margin: .6rem 0; }
-li { margin: .35rem 0; }
-hr { border: none; height: 1px; background: var(--border); margin: 1.6rem 0; }
-
-/* 链接（橙色，仅正文与导航） */
-a { color: var(--link); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* 导航 pill */
-.nav { margin: 1rem 0 1.8rem; }
-.nav a {
-  display: inline-block;
-  margin: 0 10px 10px 0;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: #fef3c7;         /* amber-100 */
-  border: 1px solid var(--border);
-  color: #b45309;              /* amber-700 */
-  font-weight: 600;
-}
-.nav a:hover { background: #fde68a; } /* amber-200 */
-
-/* 页脚 */
-footer {
-  text-align: center;
+.items .marker {
   color: var(--muted);
-  font-size: .95rem;
-  margin-top: 2.2rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--border);
+  font-family: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  user-select: none;
+}
+.items .tag {
+  display: inline-block;
+  font-family: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-bd);
+  padding: 1px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.items .tag.muted { color: #555; background: #f3f0e8; border-color: #e0dccf; }
+.items .tag.win   { color: #b45309; background: #fff7e0; border-color: #f5d57a; }
+
+.items .body { flex: 1; min-width: 0; }
+.items .title { font-weight: 500; color: var(--text); }
+.items a.title { text-decoration: none; }
+.items a.title:hover { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; }
+.items .meta { display: block; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.items .authors { display: block; font-size: 12.5px; color: #333; margin-top: 1px; }
+.items .authors strong { color: var(--text); font-weight: 600; }
+.items .award { color: #b45309; }
+
+/* ---------- Education timeline ---------- */
+.timeline { list-style: none; padding: 0; margin: 8px 0 0; }
+.timeline li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  padding: 8px 0 8px 0;
+  border-left: 3px solid transparent;
+  padding-left: 10px;
+  transition: border-color 0.15s ease;
+}
+.timeline li:hover { border-left-color: var(--hover); }
+.timeline .when {
+  font-family: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  padding-top: 1px;
+}
+.timeline .what .degree { font-weight: 600; }
+.timeline .what .school { color: #333; font-size: 13px; }
+
+/* ---------- Generic prose links ---------- */
+.site-header a { color: var(--accent); }
+.site-header a:hover { text-decoration: underline; }
+
+/* ---------- Footer line ---------- */
+.footnote {
+  margin-top: 40px;
+  font-size: 12px;
+  color: var(--muted);
+  font-family: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
 }
 
-/* --- 导航条样式 --- */
-.navbar{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr); /* 四个按钮均分 */
-  gap:16px;
-  margin:20px 0 32px;
-}
+/* ---------- Background scene (loss landscape) ---------- */
+#scene { position: fixed; inset: 0; overflow: hidden; z-index: 0; pointer-events: none; }
+#landscape { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 
-.navbar a{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:14px 0;
-  border:2px solid var(--border);
-  border-radius:12px;
-  background:#fef3c7;   /* 浅黄底 */
-  color:#b45309;        /* 琥珀色文字 */
-  text-decoration:none;
-  font-size:1.1rem;     /* 字体更大 */
-  font-weight:600;
-  transition: all 0.2s ease;
+/* ---------- Mobile ---------- */
+@media (max-width: 680px) {
+  .site-header { padding: 28px 22px 60px; }
+  .profile { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .profile img { width: 100px; height: 100px; }
+  .profile-meta .name { font-size: 26px; }
+  .timeline li { grid-template-columns: 90px 1fr; gap: 12px; }
+  #scene { display: none; }                      /* hide landscape on mobile */
+  body { background: #faf5ec; }
 }
-
-.navbar a:hover{
-  background:#fde68a;
-  transform:translateY(-2px);
-  box-shadow:0 4px 12px rgba(249,115,22,0.15);
-}
-
-/* 专门给 Publications 标题的链接变蓝 */
-a.pub-link,
-a.pub-link:visited {
-  color: #1a0dab !important;      /* Google Scholar 蓝 */
-  text-decoration: none !important;
-  font-weight: 800;
-}
-
-a.pub-link:hover,
-a.pub-link:focus {
-  color: #0b0080 !important;      /* 悬停更深蓝 */
-  text-decoration: underline !important;
-}
-
-/* ===== 最后保险 —— 强制覆盖任何遗留的橙色标题 ===== */
-h1 a, h2 a, h3 a { color: var(--text) !important; } /* 若标题里含链接 */
-strong, b { color: var(--text) !important; }        /* 避免加粗被误染色 */
