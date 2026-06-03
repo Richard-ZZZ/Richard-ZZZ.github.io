@@ -155,7 +155,7 @@ if (canvas) {
     if (!swanImg.complete || swanImg.naturalWidth === 0) return;
 
     const { x, y } = swanPosition(t);
-    const width = Math.max(120, Math.min(185, W * 0.12));
+    const width = Math.max(78, Math.min(120, W * 0.078));
     const height = width * (swanImg.naturalHeight / swanImg.naturalWidth);
     const bob = Math.sin(t * 0.0018) * 2;
 
