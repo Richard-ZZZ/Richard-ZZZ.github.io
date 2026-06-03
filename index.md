@@ -12,8 +12,6 @@ title: "Ruijia Zhang"
       <a href="mailto:rzhan127@jh.edu">rzhan127@jh.edu</a>
       <span class="sep">·</span>
       <a href="https://scholar.google.com/citations?hl=en&amp;view_op=list_works&amp;user=gBhh93cAAAAJ">Scholar</a>
-      <span class="sep">·</span>
-      <a href="https://github.com/Richard-ZZZ">GitHub</a>
     </p>
   </div>
 </div>
@@ -105,7 +103,7 @@ I'm a PhD candidate in the <b>Department of Applied Mathematics and Statistics</
   </li>
   <li>
     <span class="marker">&gt;</span>
-    <span class="tag muted">UTF</span>
+    <span class="tag muted">TA</span>
     <span class="body">
       <span class="title">Ordinary Differential Equations</span>
       <span class="meta">MAT2002 · CUHK-Shenzhen · Spring 2024</span>
@@ -113,7 +111,7 @@ I'm a PhD candidate in the <b>Department of Applied Mathematics and Statistics</
   </li>
   <li>
     <span class="marker">&gt;</span>
-    <span class="tag muted">UTF</span>
+    <span class="tag muted">TA</span>
     <span class="body">
       <span class="title">Optimization</span>
       <span class="meta">MAT3007 · CUHK-Shenzhen · Fall 2023</span>
