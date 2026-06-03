@@ -190,16 +190,16 @@ if (!canvasWater || !canvasFish) {
     }
   }
 
-  const palette = ['#F6A04D', '#EBCFA2', '#B8DDD3', '#F597A2'];
+  const palette = ['#F6A04D', '#c2691d', '#B8DDD3', '#F597A2'];  // darker orange, remove beige
   let fishes = [];
   function spawnFishes() {
     fishes = [];
     const count = 4;
     for (let i = 0; i < count; i++) {
       fishes.push(new Fish(
-        window.innerWidth  * 0.5 + i * 20,
-        Math.random() * window.innerHeight,
-        50,
+        window.innerWidth  * (0.2 + i * 0.2),  // spread across width
+        window.innerHeight * (0.3 + Math.random() * 0.4),  // varied heights
+        80,  // bigger fish (was 50)
         palette[i % palette.length]
       ));
     }
