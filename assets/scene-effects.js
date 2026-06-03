@@ -34,7 +34,7 @@ if (canvas) {
   }
 
   function lakeY(x) {
-    return H * 0.60 + Math.sin(x * 0.006) * 6;
+    return H * 0.78 + Math.sin(x * 0.006) * 4;
   }
 
   class Petal {
@@ -193,7 +193,7 @@ if (canvas) {
     rippleTimer += dt;
     if (rippleTimer > 1.9) {
       rippleTimer = 0;
-      ripples.push(new Ripple(rand(W * 0.38, W * 0.96), rand(H * 0.61, H * 0.83), rand(44, 112), 0.18));
+      ripples.push(new Ripple(rand(W * 0.38, W * 0.96), rand(H * 0.76, H * 0.90), rand(44, 112), 0.18));
     }
 
     for (let i = ripples.length - 1; i >= 0; i--) {
