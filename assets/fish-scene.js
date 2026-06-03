@@ -130,7 +130,7 @@ if (!canvasWater || !canvasFish) {
       }
     }
 
-    ctxWater.lineWidth = 1;
+    ctxWater.lineWidth = 1.35;
     ctxWater.lineCap = 'round';
 
     function interp(xa, ya, va, xb, yb, vb, level) {
@@ -140,10 +140,10 @@ if (!canvasWater || !canvasFish) {
     }
 
     levels.forEach((level, levelIndex) => {
-      const alpha = 0.12 + 0.025 * (levelIndex % 3);
+      const alpha = 0.26 + 0.045 * (levelIndex % 3);
       ctxWater.strokeStyle = level < 0
         ? `rgba(0, 88, 115, ${alpha})`
-        : `rgba(180, 83, 9, ${alpha * 0.65})`;
+        : `rgba(180, 83, 9, ${alpha * 0.75})`;
       ctxWater.beginPath();
 
       for (let j = 0; j < rows - 1; j++) {
@@ -197,19 +197,35 @@ if (!canvasWater || !canvasFish) {
       + 0.15 * Math.cos(2.1 * t + 0.6 + seed);
   }
 
+  function randomStartPoint() {
+    const edge = Math.floor(Math.random() * 4);
+    const margin = 70;
+    if (edge === 0) return { x: Math.random() * W, y: margin + Math.random() * 80 };
+    if (edge === 1) return { x: W - margin - Math.random() * 80, y: Math.random() * H };
+    if (edge === 2) return { x: Math.random() * W, y: H - margin - Math.random() * 80 };
+    return { x: margin + Math.random() * 80, y: Math.random() * H };
+  }
+
   class Fish {
     constructor(x0, y0, len, color) {
       this.len = len;
       this.segCount = 32;
       this.segLen = this.len / (this.segCount - 1);
-      this.spine = Array.from({ length: this.segCount }, (_, i) => ({ x: x0 - i * this.segLen, y: y0 }));
-      this.theta = Math.random() * Math.PI * 2;
       this.baseSpeed = 0.75 + Math.random() * 0.45;
       this.speed = this.baseSpeed;
       this.noiseSeed = Math.random() * 1000;
       this.color = color;
       this.tailbeatFreq = lerp(0.025, 0.055, Math.random());
       this.tailbeatAmp = lerp(0.55, 0.85, Math.random());
+      this.reset(x0, y0);
+    }
+
+    reset(x0, y0) {
+      const start = Number.isFinite(x0) && Number.isFinite(y0) ? { x: x0, y: y0 } : randomStartPoint();
+      this.spine = Array.from({ length: this.segCount }, (_, i) => ({ x: start.x - i * this.segLen, y: start.y }));
+      this.theta = Math.random() * Math.PI * 2;
+      this.basinFrames = 0;
+      this.life = 0;
     }
 
     radiusAt(i) {
@@ -221,7 +237,7 @@ if (!canvasWater || !canvasFish) {
       return clamp(r0 * body * tailTaper + rMinHead * (1 - s), 1, 999);
     }
 
-    update(t) {
+    update(t, allFish) {
       const head = this.spine[0];
       const flow = descentFlow(head.x, head.y);
       const wander = fbm(t * 0.0018, this.noiseSeed) * 0.030;
@@ -231,6 +247,32 @@ if (!canvasWater || !canvasFish) {
         desiredAngle = Math.atan2(flow.y, flow.x) + wander * 0.75;
       }
 
+      let repelX = 0;
+      let repelY = 0;
+      for (const other of allFish) {
+        if (other === this) continue;
+        const otherHead = other.spine[0];
+        const dx = head.x - otherHead.x;
+        const dy = head.y - otherHead.y;
+        const d = Math.hypot(dx, dy);
+        if (d > 0 && d < 120) {
+          const strength = (120 - d) / 120;
+          repelX += (dx / d) * strength;
+          repelY += (dy / d) * strength;
+        }
+      }
+      if (Math.hypot(repelX, repelY) > 0.01) {
+        desiredAngle = lerpAngle(desiredAngle, Math.atan2(repelY, repelX), 0.35);
+      }
+
+      if (flow.norm < 0.00022) this.basinFrames++;
+      else this.basinFrames = Math.max(0, this.basinFrames - 3);
+
+      if (this.basinFrames > 120 || this.life > 2200) {
+        this.reset();
+        return;
+      }
+
       const margin = 90;
       if (head.x < margin) desiredAngle = lerpAngle(desiredAngle, 0, 0.25);
       if (head.x > W - margin) desiredAngle = lerpAngle(desiredAngle, Math.PI, 0.25);
@@ -238,15 +280,17 @@ if (!canvasWater || !canvasFish) {
       if (head.y > H - margin) desiredAngle = lerpAngle(desiredAngle, -Math.PI / 2, 0.25);
 
       this.theta = lerpAngle(this.theta, desiredAngle, 0.030);
-      this.speed = this.baseSpeed * (1 + 0.20 * Math.sin(t * 0.002 + this.noiseSeed));
+      const basinSlowdown = this.basinFrames > 0 ? 0.45 : 1;
+      this.speed = this.baseSpeed * basinSlowdown * (1 + 0.20 * Math.sin(t * 0.002 + this.noiseSeed));
       head.x += this.speed * Math.cos(this.theta);
       head.y += this.speed * Math.sin(this.theta);
+      this.life++;
 
       const pad = 30;
-      if (head.x < -pad) head.x = W + pad;
-      if (head.x > W + pad) head.x = -pad;
-      if (head.y < -pad) head.y = H + pad;
-      if (head.y > H + pad) head.y = -pad;
+      if (head.x < -pad || head.x > W + pad || head.y < -pad || head.y > H + pad) {
+        this.reset();
+        return;
+      }
 
       for (let i = 1; i < this.segCount; i++) {
         const prev = this.spine[i - 1];
@@ -327,12 +371,8 @@ if (!canvasWater || !canvasFish) {
     fish = [];
     const count = 4;
     for (let i = 0; i < count; i++) {
-      fish.push(new Fish(
-        W * (0.18 + i * 0.21),
-        H * (0.25 + Math.random() * 0.5),
-        64,
-        palette[i % palette.length]
-      ));
+      const start = randomStartPoint();
+      fish.push(new Fish(start.x, start.y, 64, palette[i % palette.length]));
     }
   }
 
@@ -348,7 +388,7 @@ if (!canvasWater || !canvasFish) {
 
     ctxFish.clearRect(0, 0, W, H);
     for (const f of fish) {
-      f.update(now);
+      f.update(now, fish);
       f.draw(ctxFish);
     }
 

@@ -181,7 +181,7 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
 /* ---------- Background scene (fish + water) ---------- */
 #scene { position: fixed; inset: 0; overflow: hidden; z-index: 0; pointer-events: none; }
 #water, #fish { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-#water { z-index: 5; opacity: 0.18; }
+#water { z-index: 5; opacity: 0.85; }
 #fish  { z-index: 10; }
 
 /* ---------- Mobile ---------- */
