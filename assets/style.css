@@ -41,18 +41,18 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: linear-gradient(90deg, rgba(255,254,251,0.82) 0%, rgba(255,254,251,0.55) 42%, rgba(255,254,251,0.22) 100%), url('/assets/img/fuji-yamanakako-bg.png');
-  background-size: cover;
+  background-image: linear-gradient(90deg, rgba(255,254,251,0.72) 0%, rgba(255,254,251,0.32) 42%, rgba(255,254,251,0.02) 100%), url('/assets/img/fuji-yamanakako-bg.png');
+  background-size: auto 100%;
   background-position: center right;
   background-repeat: no-repeat;
-  opacity: 0.78;
+  opacity: 1;
   transform-origin: center right;
   animation: fuji-breath 48s ease-in-out infinite alternate;
 }
 
 @keyframes fuji-breath {
-  from { transform: scale(1.01) translate3d(0, 0, 0); opacity: 0.74; }
-  to { transform: scale(1.035) translate3d(-10px, -6px, 0); opacity: 0.82; }
+  from { transform: scale(1.005) translate3d(0, 0, 0); opacity: 0.96; }
+  to { transform: scale(1.025) translate3d(-8px, -5px, 0); opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
