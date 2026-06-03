@@ -232,7 +232,7 @@ if (!canvasWater || !canvasFish) {
     }
   }
 
-  const palette = ['#FF6B9D', '#FFA07A', '#87CEEB', '#FFD700'];  // butterfly colors
+  const palette = ['#D4A574', '#C9B8A0', '#B8C9C4', '#D9B8B8'];  // muted warm tones
   let butterflies = [];
   function spawnButterflies() {
     butterflies = [];
