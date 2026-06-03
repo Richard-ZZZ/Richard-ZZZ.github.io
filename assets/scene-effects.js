@@ -144,10 +144,10 @@ if (canvas) {
   let rippleTimer = 0;
 
   function swanPosition(t) {
-    const loop = (t * 0.000032) % 1;
+    const loop = (t * 0.000026) % 1;
     return {
-      x: W * 1.02 - loop * W * 0.56,
-      y: H * 0.71 + Math.sin(t * 0.0008) * 6,
+      x: W * 0.82 - loop * W * 0.34,
+      y: H * 0.80 + Math.sin(t * 0.0008) * 2.5,
     };
   }
 
@@ -155,24 +155,24 @@ if (canvas) {
     if (!swanImg.complete || swanImg.naturalWidth === 0) return;
 
     const { x, y } = swanPosition(t);
-    const width = Math.max(78, Math.min(120, W * 0.078));
+    const width = Math.max(42, Math.min(68, W * 0.044));
     const height = width * (swanImg.naturalHeight / swanImg.naturalWidth);
-    const bob = Math.sin(t * 0.0018) * 2;
+    const bob = Math.sin(t * 0.0018) * 0.8;
 
     ctx.save();
-    ctx.globalAlpha = 0.76;
-    ctx.drawImage(swanImg, x - width / 2, y - height * 0.82 + bob, width, height);
+    ctx.globalAlpha = 0.62;
+    ctx.drawImage(swanImg, x - width / 2, y - height * 0.84 + bob, width, height);
     ctx.restore();
 
     ctx.save();
-    ctx.globalAlpha = 0.11;
-    ctx.translate(x, y + height * 0.15 + bob * 0.4);
+    ctx.globalAlpha = 0.08;
+    ctx.translate(x, y + height * 0.10 + bob * 0.3);
     ctx.scale(1, -0.28);
     ctx.drawImage(swanImg, -width / 2, -height * 0.15, width, height);
     ctx.restore();
 
-    if (Math.random() < 0.018) {
-      ripples.push(new Ripple(x + width * 0.25, y + 4, rand(35, 85), 0.13));
+    if (Math.random() < 0.012) {
+      ripples.push(new Ripple(x + width * 0.25, y + 2, rand(18, 42), 0.10));
     }
   }
 
