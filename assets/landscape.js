@@ -90,7 +90,7 @@ if (canvas) {
      For each cell, look up the 4-bit corner mask and emit
      line segments interpolated to the iso-level. */
   const CELL = 28;                    // grid cell size in CSS px
-  const LEVELS = [-0.9, -0.6, -0.3, 0.0, 0.3, 0.6, 0.9];
+  const LEVELS = [-0.95, -0.75, -0.55, -0.35, -0.15, 0.05, 0.25, 0.45, 0.65, 0.85]; // denser contours
 
   function drawContours() {
     const cols = Math.ceil(W / CELL) + 1;
@@ -104,9 +104,9 @@ if (canvas) {
       }
     }
 
-    ctx.lineWidth = 1;
+    ctx.lineWidth = 1.2;
     ctx.lineCap = 'round';
-    ctx.strokeStyle = 'rgba(180, 83, 9, 0.16)';   // amber-700, faint
+    ctx.strokeStyle = 'rgba(180, 83, 9, 0.28)';   // amber-700, more visible
 
     for (const c of LEVELS) {
       ctx.beginPath();
@@ -165,41 +165,65 @@ if (canvas) {
       this.y = margin + Math.random() * (H - 2 * margin);
       this.trail = [];
       this.life = 0;
-      this.maxLife = 600 + Math.random() * 400;     /* frames */
+      this.maxLife = 800 + Math.random() * 600;     /* frames — slower */
+      this.stuckFrames = 0;                          /* count frames at minimum */
+      this.wasStuck = false;
     }
     step() {
       const { gx, gy } = grad(this.x, this.y);
-      const speed = 1.4;
+      const speed = 1.0;                             /* slower descent */
       const norm = Math.hypot(gx, gy) + 1e-6;
       this.x -= gx / norm * speed;
       this.y -= gy / norm * speed;
 
       this.trail.push({ x: this.x, y: this.y });
-      if (this.trail.length > 80) this.trail.shift();
+      if (this.trail.length > 140) this.trail.shift(); /* longer trail */
       this.life++;
 
-      const stuck = norm < 0.0006;
+      const stuck = norm < 0.0008;
+      if (stuck) {
+        this.stuckFrames++;
+        this.wasStuck = true;
+      } else {
+        this.stuckFrames = 0;
+      }
+
       const offscreen = this.x < -20 || this.x > W + 20 || this.y < -20 || this.y > H + 20;
-      if (stuck || offscreen || this.life > this.maxLife) {
+      /* Stay at the minimum for ~90 frames to make it visible, then respawn. */
+      if (offscreen || this.life > this.maxLife || this.stuckFrames > 90) {
         this.respawn();
       }
     }
     draw() {
       if (this.trail.length < 2) return;
-      ctx.strokeStyle = 'rgba(180, 83, 9, 0.55)';
-      ctx.lineWidth = 1.4;
-      ctx.beginPath();
-      for (let i = 0; i < this.trail.length; i++) {
-        const p = this.trail[i];
-        if (i === 0) ctx.moveTo(p.x, p.y);
-        else ctx.lineTo(p.x, p.y);
-      }
-      ctx.stroke();
 
+      /* Trail: gradient from faint (tail) to bright (head). */
+      for (let i = 1; i < this.trail.length; i++) {
+        const a = this.trail[i - 1], b = this.trail[i];
+        const t = i / (this.trail.length - 1);   /* 0 = tail, 1 = head */
+        const alpha = 0.25 + 0.50 * t;
+        ctx.strokeStyle = `rgba(180, 83, 9, ${alpha.toFixed(3)})`;
+        ctx.lineWidth = 1.2 + 1.0 * t;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+
+      /* Head: bright dot. If stuck, add a pulsing glow. */
       ctx.fillStyle = '#b45309';
       ctx.beginPath();
-      ctx.arc(this.x, this.y, 3.2, 0, Math.PI * 2);
+      ctx.arc(this.x, this.y, 3.6, 0, Math.PI * 2);
       ctx.fill();
+
+      if (this.wasStuck && this.stuckFrames > 0 && this.stuckFrames < 90) {
+        const pulse = 0.5 + 0.5 * Math.sin(this.stuckFrames * 0.15);
+        ctx.fillStyle = `rgba(252, 211, 77, ${(0.6 * pulse).toFixed(3)})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 8 + 4 * pulse, 0, Math.PI * 2);
+        ctx.fill();
+      }
     }
   }
 
