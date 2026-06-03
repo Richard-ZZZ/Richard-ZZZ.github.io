@@ -121,6 +121,12 @@ if (canvas) {
       this.life = 0;
       this.maxLife = rand(2.6, 4.4);
       this.alpha = alpha;
+      this.rotation = rand(-0.18, 0.18);
+      this.squash = rand(0.18, 0.31);
+      this.wobble = rand(0.04, 0.12);
+      this.phase = rand(0, Math.PI * 2);
+      this.gapStart = rand(0, Math.PI * 2);
+      this.gapWidth = rand(0.30, 0.95);
     }
 
     update(dt) {
@@ -131,11 +137,34 @@ if (canvas) {
 
     draw(ctx) {
       const a = Math.max(0, 1 - this.life / this.maxLife);
+      const progress = this.life / this.maxLife;
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.rotation + Math.sin(progress * Math.PI) * 0.04);
       ctx.strokeStyle = `rgba(62, 116, 132, ${this.alpha * a})`;
-      ctx.lineWidth = 1.4;
-      ctx.beginPath();
-      ctx.ellipse(this.x, this.y, this.r, this.r * 0.23, 0, 0, Math.PI * 2);
-      ctx.stroke();
+      ctx.lineWidth = 1.1 + 0.5 * a;
+      ctx.lineCap = 'round';
+
+      const rings = 2;
+      for (let ring = 0; ring < rings; ring++) {
+        const radius = this.r * (1 - ring * 0.18);
+        if (radius < 4) continue;
+        const start = this.gapStart + ring * 0.7;
+        const end = start + Math.PI * 2 - this.gapWidth * (1 + ring * 0.25);
+        const steps = 80;
+        ctx.beginPath();
+        for (let i = 0; i <= steps; i++) {
+          const u = i / steps;
+          const theta = start + (end - start) * u;
+          const noise = 1 + this.wobble * Math.sin(theta * 3 + this.phase) + this.wobble * 0.55 * Math.sin(theta * 7 - this.phase);
+          const x = Math.cos(theta) * radius * noise;
+          const y = Math.sin(theta) * radius * this.squash * (1 + 0.04 * Math.sin(theta * 5 + this.phase));
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      }
+      ctx.restore();
     }
   }
 
