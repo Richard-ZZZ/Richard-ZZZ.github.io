@@ -132,7 +132,7 @@ if (canvas) {
     draw(ctx) {
       const a = Math.max(0, 1 - this.life / this.maxLife);
       ctx.strokeStyle = `rgba(62, 116, 132, ${this.alpha * a})`;
-      ctx.lineWidth = 1;
+      ctx.lineWidth = 1.4;
       ctx.beginPath();
       ctx.ellipse(this.x, this.y, this.r, this.r * 0.23, 0, 0, Math.PI * 2);
       ctx.stroke();
@@ -146,8 +146,8 @@ if (canvas) {
   function swanPosition(t) {
     const loop = (t * 0.000026) % 1;
     return {
-      x: W * 0.82 - loop * W * 0.34,
-      y: H * 0.80 + Math.sin(t * 0.0008) * 2.5,
+      x: W * 0.76 - loop * W * 0.26,
+      y: H * 0.84 + Math.sin(t * 0.0008) * 1.5,
     };
   }
 
@@ -155,12 +155,12 @@ if (canvas) {
     if (!swanImg.complete || swanImg.naturalWidth === 0) return;
 
     const { x, y } = swanPosition(t);
-    const width = Math.max(42, Math.min(68, W * 0.044));
+    const width = Math.max(32, Math.min(52, W * 0.034));
     const height = width * (swanImg.naturalHeight / swanImg.naturalWidth);
     const bob = Math.sin(t * 0.0018) * 0.8;
 
     ctx.save();
-    ctx.globalAlpha = 0.62;
+    ctx.globalAlpha = 0.52;
     ctx.drawImage(swanImg, x - width / 2, y - height * 0.84 + bob, width, height);
     ctx.restore();
 
@@ -172,7 +172,7 @@ if (canvas) {
     ctx.restore();
 
     if (Math.random() < 0.012) {
-      ripples.push(new Ripple(x + width * 0.25, y + 2, rand(18, 42), 0.10));
+      ripples.push(new Ripple(x + width * 0.25, y + 2, rand(24, 58), 0.18));
     }
   }
 
@@ -193,7 +193,7 @@ if (canvas) {
     rippleTimer += dt;
     if (rippleTimer > 1.9) {
       rippleTimer = 0;
-      ripples.push(new Ripple(rand(W * 0.38, W * 0.96), rand(H * 0.61, H * 0.83), rand(34, 90), 0.11));
+      ripples.push(new Ripple(rand(W * 0.38, W * 0.96), rand(H * 0.61, H * 0.83), rand(44, 112), 0.18));
     }
 
     for (let i = ripples.length - 1; i >= 0; i--) {
