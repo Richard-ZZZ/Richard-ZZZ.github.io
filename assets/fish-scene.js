@@ -265,10 +265,10 @@ if (!canvasWater || !canvasFish) {
         desiredAngle = lerpAngle(desiredAngle, Math.atan2(repelY, repelX), 0.35);
       }
 
-      if (flow.norm < 0.00022) this.basinFrames++;
+      if (flow.norm < 0.00028) this.basinFrames++;
       else this.basinFrames = Math.max(0, this.basinFrames - 3);
 
-      if (this.basinFrames > 120 || this.life > 2200) {
+      if (this.basinFrames > 12 || this.life > 2200) {
         this.reset();
         return;
       }
@@ -280,8 +280,7 @@ if (!canvasWater || !canvasFish) {
       if (head.y > H - margin) desiredAngle = lerpAngle(desiredAngle, -Math.PI / 2, 0.25);
 
       this.theta = lerpAngle(this.theta, desiredAngle, 0.030);
-      const basinSlowdown = this.basinFrames > 0 ? 0.45 : 1;
-      this.speed = this.baseSpeed * basinSlowdown * (1 + 0.20 * Math.sin(t * 0.002 + this.noiseSeed));
+      this.speed = this.baseSpeed * (1 + 0.20 * Math.sin(t * 0.002 + this.noiseSeed));
       head.x += this.speed * Math.cos(this.theta);
       head.y += this.speed * Math.sin(this.theta);
       this.life++;
