@@ -81,7 +81,7 @@ I'm a PhD candidate in the <b>Department of Applied Mathematics and Statistics</
     <span class="marker">&gt;</span>
     <span class="tag muted">Intern</span>
     <span class="body">
-      <span class="title">Research Intern, Mitsubishi Electric Research Laboratories (MERL)</span>
+      <span class="title"><img class="org-logo" src="{{ '/assets/img/logos/merl.png' | relative_url }}" alt="MERL logo">Research Intern, Mitsubishi Electric Research Laboratories (MERL)</span>
       <span class="meta">Cambridge, MA · May 2026 — Now · Mentor: Dr. Dehong Liu</span>
       <span class="authors">Large language models for anomaly detection and predictive maintenance.</span>
     </span>
@@ -161,21 +161,21 @@ I'm a PhD candidate in the <b>Department of Applied Mathematics and Statistics</
     <span class="when">2024 — now</span>
     <span class="what">
       <span class="degree">PhD, Applied Mathematics &amp; Statistics</span><br>
-      <span class="school">Johns Hopkins University</span>
+      <span class="school"><img class="org-logo" src="{{ '/assets/img/logos/jhu.png' | relative_url }}" alt="JHU logo">Johns Hopkins University</span>
     </span>
   </li>
   <li>
     <span class="when">2020 — 2024</span>
     <span class="what">
       <span class="degree">BSc, Mathematics &amp; Applied Mathematics (First Class Honors)</span><br>
-      <span class="school">The Chinese University of Hong Kong, Shenzhen</span>
+      <span class="school"><img class="org-logo" src="{{ '/assets/img/logos/cuhk.png' | relative_url }}" alt="CUHK-Shenzhen logo">The Chinese University of Hong Kong, Shenzhen</span>
     </span>
   </li>
   <li>
     <span class="when">Apr — Aug 2023</span>
     <span class="what">
       <span class="degree">Exchange, Mathematics</span><br>
-      <span class="school">Technical University of Munich</span>
+      <span class="school"><img class="org-logo" src="{{ '/assets/img/logos/tum.png' | relative_url }}" alt="TUM logo">Technical University of Munich</span>
     </span>
   </li>
 </ul>

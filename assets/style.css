@@ -198,6 +198,17 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
 .site-header a { color: var(--accent); }
 .site-header a:hover { text-decoration: underline; }
 
+/* ---------- Organization logos ---------- */
+.org-logo {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: -3px;
+  margin-right: 6px;
+  border-radius: 3px;
+  object-fit: contain;
+}
+
 /* ---------- Footer line ---------- */
 .footnote {
   margin-top: 40px;
