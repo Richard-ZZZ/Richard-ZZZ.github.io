@@ -209,11 +209,17 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   object-fit: contain;
 }
 
-.org-logo-merl {
-  width: 160px;
-  height: auto;
-  vertical-align: -18px;
-  border-radius: 0;
+/* Adjust specific logos */
+.org-logo[alt="JHU logo"] {
+  width: 32px;
+  height: 32px;
+  vertical-align: -7px;
+}
+
+.org-logo[alt="TUM logo"] {
+  width: 42px;
+  height: 42px;
+  vertical-align: -9px;
 }
 
 /* ---------- Footer line ---------- */
