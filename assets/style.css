@@ -209,6 +209,13 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   object-fit: contain;
 }
 
+/* Larger size for logos with more text detail */
+.org-logo-large {
+  width: 56px;
+  height: 56px;
+  vertical-align: -12px;
+}
+
 /* ---------- Footer line ---------- */
 .footnote {
   margin-top: 40px;
