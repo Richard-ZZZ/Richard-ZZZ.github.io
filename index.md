@@ -11,7 +11,7 @@ title: "Ruijia Zhang"
     <p class="contacts">
       <a href="mailto:rzhan127@jh.edu">rzhan127@jh.edu</a>
       <span class="sep">·</span>
-      <a href="https://scholar.google.com/citations?hl=en&amp;view_op=list_works&amp;user=gBhh93cAAAAJ">Scholar</a>
+      <a href="https://scholar.google.com/citations?hl=en&amp;view_op=list_works&amp;user=gBhh93cAAAAJ">Google Scholar</a>
     </p>
   </div>
 </div>
@@ -74,6 +74,41 @@ I'm a PhD candidate in the <b>Department of Applied Mathematics and Statistics</
   </li>
 </ul>
 
+## Industry Experience
+
+<ul class="items">
+  <li>
+    <span class="marker">&gt;</span>
+    <span class="tag muted">Intern</span>
+    <span class="body">
+      <span class="title">Research Intern, Mitsubishi Electric Research Laboratories (MERL)</span>
+      <span class="meta">Cambridge, MA · May 2026 — Now · Mentor: Dr. Dehong Liu</span>
+      <span class="authors">Large language models for anomaly detection and predictive maintenance.</span>
+    </span>
+  </li>
+</ul>
+
+## Awards
+
+<ul class="items">
+  <li>
+    <span class="marker">&gt;</span>
+    <span class="tag win">🏆</span>
+    <span class="body">
+      <span class="title">ASA Nonparametric Statistics Section Best Student Paper Award</span>
+      <span class="meta">Joint Statistical Meetings (JSM) 2026</span>
+    </span>
+  </li>
+  <li>
+    <span class="marker">&gt;</span>
+    <span class="tag win">🏆</span>
+    <span class="body">
+      <span class="title">ICCOPT 2025 Student Grant</span>
+      <span class="meta">International Conference on Continuous Optimization</span>
+    </span>
+  </li>
+</ul>
+
 ## Teaching
 
 <ul class="items">
@@ -115,27 +150,6 @@ I'm a PhD candidate in the <b>Department of Applied Mathematics and Statistics</
     <span class="body">
       <span class="title">Optimization</span>
       <span class="meta">MAT3007 · CUHK-Shenzhen · Fall 2023</span>
-    </span>
-  </li>
-</ul>
-
-## Awards
-
-<ul class="items">
-  <li>
-    <span class="marker">&gt;</span>
-    <span class="tag win">🏆</span>
-    <span class="body">
-      <span class="title">ASA Nonparametric Statistics Section Best Student Paper Award</span>
-      <span class="meta">Joint Statistical Meetings (JSM) 2026</span>
-    </span>
-  </li>
-  <li>
-    <span class="marker">&gt;</span>
-    <span class="tag win">🏆</span>
-    <span class="body">
-      <span class="title">ICCOPT 2025 Student Grant</span>
-      <span class="meta">International Conference on Continuous Optimization</span>
     </span>
   </li>
 </ul>
