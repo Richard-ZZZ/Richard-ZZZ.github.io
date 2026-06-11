@@ -28,7 +28,7 @@ I'm a PhD candidate in the <b>Department of Applied Mathematics and Statistics</
     <span class="tag">Paper</span>
     <span class="body">
       <a class="title" href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}">Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR</a>
-      <span class="meta">ICML 2026 · with Meta Super Intelligence Team and xAI</span>
+      <span class="meta">ICML 2026 · with Meta Superintelligence Labs</span>
       <span class="authors"><strong>Ruijia Zhang</strong>, Jiacheng Zhu, Andy Su, Hanqing Zhu, Laixi Shi</span>
     </span>
   </li>
