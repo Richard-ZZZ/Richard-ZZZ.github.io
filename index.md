@@ -4,7 +4,7 @@ title: "Ruijia Zhang"
 ---
 
 <div class="profile">
-  <img src="{{ '/assets/img/IMG_7151.JPG' | relative_url }}" alt="Ruijia Zhang">
+  <img src="{{ '/assets/img/IMG_8658.jpg' | relative_url }}" alt="Ruijia Zhang">
   <div class="profile-meta">
     <p class="name">Ruijia Zhang</p>
     <p class="role">PhD Candidate, Applied Mathematics &amp; Statistics<br>Johns Hopkins University</p>
