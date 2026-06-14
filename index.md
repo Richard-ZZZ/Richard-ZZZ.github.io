@@ -7,7 +7,7 @@ title: "Ruijia Zhang"
   <img src="{{ '/assets/img/IMG_8658.jpg' | relative_url }}" alt="Ruijia Zhang">
   <div class="profile-meta">
     <p class="name">Ruijia Zhang</p>
-    <p class="role">PhD Candidate, Applied Mathematics &amp; Statistics<br>Johns Hopkins University</p>
+    <p class="role">PhD Student, Applied Mathematics &amp; Statistics<br>Johns Hopkins University</p>
     <p class="contacts">
       <a href="mailto:rzhan127@jh.edu">rzhan127@jh.edu</a>
       <span class="sep">·</span>
@@ -17,7 +17,7 @@ title: "Ruijia Zhang"
 </div>
 
 <p class="bio">
-I'm a PhD candidate in the <b>Department of Applied Mathematics and Statistics</b> at <b>Johns Hopkins University</b>, working on <b>reliable and robust decisions under uncertainty</b> at the intersection of applied probability, optimization, and reinforcement learning. Recent focus: <b>LLM fine-tuning</b> and <b>distributionally robust optimization</b>.
+I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b> at <b>Johns Hopkins University</b>, working on the <b>theoretical foundations of AI</b>, using tools from probability theory and optimization to understand modern large language model training and alignment.
 </p>
 
 ## Research
