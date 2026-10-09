@@ -51,6 +51,21 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
 
 </div>
 
+## Technical Reports
+
+<div class="report-scroll" role="region" aria-label="Technical reports" tabindex="0">
+<ul class="report-list">
+  <li>
+    <a href="https://arxiv.org/abs/2606.02437">On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters</a>
+    <span>Technical Report · arXiv:2606.02437 · 2026</span>
+  </li>
+  <li>
+    <a href="https://arxiv.org/abs/2605.13779">MinT: Managed Infrastructure for Training and Serving Millions of LLMs</a>
+    <span>Technical Report · arXiv:2605.13779 · 2026</span>
+  </li>
+</ul>
+</div>
+
 ## Full Publication List
 
 <div class="publication-scroll" role="region" aria-label="Full publication list" tabindex="0">
@@ -61,19 +76,15 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
   </li>
   <li>
     <span class="pub-year">2026</span>
-    <span class="pub-entry"><span class="pub-title">Sparse Target Calibration for Domain Adaptation: A Conditional Distributionally Robust View</span><span class="pub-venue">Submitted to ICLR 2027</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Dehong Liu, Yebin Wang, Mitsubishi Electric Research Laboratories</span></span>
-  </li>
-  <li>
-    <span class="pub-year">2026</span>
     <span class="pub-entry"><a href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}">Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in Reinforcement Learning</a><span class="pub-venue">ICML 2026</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Jiacheng Zhu, Hanqing Zhu, Laixi Shi</span></span>
-  </li>
-  <li>
-    <span class="pub-year">WIP</span>
-    <span class="pub-entry"><span class="pub-title">Learning Optimal Robust Policies under Observational Data with Causal Transport</span><span class="pub-venue">In preparation for <em>Operations Research</em></span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Luhao Zhang, Michael Lingzhi Li</span></span>
   </li>
   <li>
     <span class="pub-year">2026</span>
     <span class="pub-entry"><a href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a><span class="pub-venue">Major Revision at <em>Journal of the American Statistical Association</em></span><span class="pub-award">🏆 ASA Nonparametric Statistics Section Best Student Paper Award, JSM 2026</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</span></span>
+  </li>
+  <li>
+    <span class="pub-year">2026</span>
+    <span class="pub-entry"><span class="pub-title">Sparse Target Calibration for Domain Adaptation: A Conditional Distributionally Robust View</span><span class="pub-venue">Submitted to ICLR 2027</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Dehong Liu, Yebin Wang, Mitsubishi Electric Research Laboratories</span></span>
   </li>
   <li>
     <span class="pub-year">2025</span>
@@ -82,6 +93,10 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
   <li>
     <span class="pub-year">2025</span>
     <span class="pub-entry"><a href="https://arxiv.org/abs/2503.18317">Improved Rates of Differentially Private Nonconvex Strongly Concave Minimax Optimization via Gradient Differences</a><span class="pub-venue">AAAI 2025</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Mingxi Lei, Meng Ding, Zihang Xiang, Jinhui Xu, Di Wang</span></span>
+  </li>
+  <li>
+    <span class="pub-year">WIP</span>
+    <span class="pub-entry"><span class="pub-title">Learning Optimal Robust Policies under Observational Data with Causal Transport</span><span class="pub-venue">In preparation for <em>Operations Research</em></span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Luhao Zhang, Michael Lingzhi Li</span></span>
   </li>
 </ol>
 </div>
@@ -168,25 +183,6 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
   </li>
 </ul>
 </div>
-
-## Technical Reports
-
-<ul class="report-list">
-  <li>
-    <span class="report-tag">TR</span>
-    <span class="report-body">
-      <a href="https://arxiv.org/abs/2606.02437">On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters</a>
-      <span>Technical Report · arXiv:2606.02437 · 2026</span>
-    </span>
-  </li>
-  <li>
-    <span class="report-tag">TR</span>
-    <span class="report-body">
-      <a href="https://arxiv.org/abs/2605.13779">MinT: Managed Infrastructure for Training and Serving Millions of LLMs</a>
-      <span>Technical Report · arXiv:2605.13779 · 2026</span>
-    </span>
-  </li>
-</ul>
 
 ## Education
 
