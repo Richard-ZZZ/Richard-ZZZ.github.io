@@ -30,22 +30,22 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
     <div class="research-copy">
       <span class="research-eyebrow">Neural network scaling · Preprint</span>
       <h3><a href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">Width and Depth Limits Commute during Training in Linear Residual Networks</a></h3>
-      <p>Proves that the infinite-width and infinite-depth limits commute throughout training: either limiting order yields the same learning dynamics and final predictor.</p>
+      <p>Shows that linear residual networks converge to the same limit during training, regardless of how width and depth jointly grow to infinity.</p>
       <p class="research-authors"><strong>Ruijia Zhang</strong>, Soufiane Hayou</p>
       <a class="paper-link" href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">paper <span aria-hidden="true">↗</span></a>
     </div>
   </article>
 
   <article class="research-card">
-    <a class="research-figure" href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}" aria-label="Read Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR">
+    <a class="research-figure" href="https://arxiv.org/abs/2606.31813" aria-label="Read Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR">
       <img src="{{ '/assets/img/research/lora-initialization.png' | relative_url }}" alt="Comparison of LoRA, PiSSA, MiLoRA, LoRA-RLPO, and LoRA-RLMO initialization strategies">
     </a>
     <div class="research-copy">
       <span class="research-eyebrow">LLM alignment · ICML 2026</span>
-      <h3><a href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}">Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR</a></h3>
+      <h3><a href="https://arxiv.org/abs/2606.31813">Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR</a></h3>
       <p>Explains why SVD-initialized LoRA variants can become unstable in RLVR and introduces orthonormal initializations that preserve pretrained geometry.</p>
       <p class="research-authors"><strong>Ruijia Zhang</strong>, Jiacheng Zhu, Hanqing Zhu, Laixi Shi</p>
-      <a class="paper-link" href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}">paper <span aria-hidden="true">↗</span></a>
+      <a class="paper-link" href="https://arxiv.org/abs/2606.31813">paper <span aria-hidden="true">↗</span></a>
     </div>
   </article>
 
@@ -76,7 +76,7 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
   </li>
   <li>
     <span class="pub-year">2026</span>
-    <span class="pub-entry"><a href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}">Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in Reinforcement Learning</a><span class="pub-venue">ICML 2026</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Jiacheng Zhu, Hanqing Zhu, Laixi Shi</span></span>
+    <span class="pub-entry"><a href="https://arxiv.org/abs/2606.31813">Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in Reinforcement Learning</a><span class="pub-venue">ICML 2026</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Jiacheng Zhu, Hanqing Zhu, Laixi Shi</span></span>
   </li>
   <li>
     <span class="pub-year">2026</span>
