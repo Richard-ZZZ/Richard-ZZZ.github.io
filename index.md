@@ -30,7 +30,7 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
     <div class="research-copy">
       <span class="research-eyebrow">Neural network scaling · Preprint</span>
       <h3><a href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">Width and Depth Limits Commute during Training in Linear Residual Networks</a></h3>
-      <p>Shows that, under the residual branch scaling used at initialization, taking width and depth to infinity in different orders leads to the same trained output limit.</p>
+      <p>Proves that the infinite-width and infinite-depth limits commute throughout training: either limiting order yields the same learning dynamics and final predictor.</p>
       <p class="research-authors"><strong>Ruijia Zhang</strong>, Soufiane Hayou</p>
       <a class="paper-link" href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">paper <span aria-hidden="true">↗</span></a>
     </div>
