@@ -1,5 +1,5 @@
 /* ============================================================
-   Fuji/Yamanakako scene effects
+   Fuji/Lake Ashi scene effects
    - single cherry blossom petals drift down
    - petals create small ripples when they touch the lake
    - watercolor swan sprite swims slowly across the lake
