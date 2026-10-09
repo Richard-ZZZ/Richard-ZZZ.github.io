@@ -22,8 +22,6 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
 
 ## Selected Research
 
-<p class="section-intro">A few projects that capture my current interests in neural-network scaling and parameter-efficient reinforcement learning.</p>
-
 <div class="research-showcase">
   <article class="research-card">
     <a class="research-figure" href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}" aria-label="Read Width and Depth Limits Commute during Training in Linear Residual Networks">
@@ -63,7 +61,7 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
   </li>
   <li>
     <span class="pub-year">2026</span>
-    <span class="pub-entry"><span class="pub-title">Sparse Target Calibration for Domain Adaptation: A Conditional Distributionally Robust View</span><span class="pub-venue">Submitted to ICLR 2027</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Dehong Liu, Mitsubishi Electric Research Laboratories</span></span>
+    <span class="pub-entry"><span class="pub-title">Sparse Target Calibration for Domain Adaptation: A Conditional Distributionally Robust View</span><span class="pub-venue">Submitted to ICLR 2027</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Dehong Liu, Yebin Wang, Mitsubishi Electric Research Laboratories</span></span>
   </li>
   <li>
     <span class="pub-year">2026</span>
@@ -83,7 +81,7 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
   </li>
   <li>
     <span class="pub-year">2026</span>
-    <span class="pub-entry"><a href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a><span class="pub-venue">Major Revision at JASA</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</span></span>
+    <span class="pub-entry"><a href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a><span class="pub-venue">Major Revision at <em>Journal of the American Statistical Association</em></span><span class="pub-award">🏆 ASA Nonparametric Statistics Section Best Student Paper Award, JSM 2026</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</span></span>
   </li>
   <li>
     <span class="pub-year">2025</span>
@@ -99,7 +97,7 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
 ## Industry Experience
 
 <ul class="items">
-  <li>
+  <li class="industry-item">
     <span class="marker">&gt;</span>
     <span class="tag muted">Intern</span>
     <span class="body">
@@ -107,6 +105,9 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
       <span class="meta">Cambridge, MA · May 2026 — Now · Mentor: Dr. Dehong Liu</span>
       <span class="authors">Large language models for anomaly detection and predictive maintenance.</span>
     </span>
+    <a class="company-logo" href="https://merl.com/" aria-label="Mitsubishi Electric Research Laboratories website">
+      <img src="{{ '/assets/img/logos/merl-logo.png' | relative_url }}" alt="MERL logo">
+    </a>
   </li>
 </ul>
 
@@ -133,13 +134,14 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
 
 ## Teaching
 
+<div class="teaching-scroll" role="region" aria-label="Teaching experience" tabindex="0">
 <ul class="items">
   <li>
     <span class="marker">&gt;</span>
     <span class="tag muted">TA</span>
     <span class="body">
       <span class="title">Time Series Analysis</span>
-      <span class="meta">EN.553.639 · JHU · Spring 2026</span>
+      <span class="meta">EN.553.639 · JHU · Spring &amp; Fall 2026</span>
     </span>
   </li>
   <li>
@@ -175,6 +177,7 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
     </span>
   </li>
 </ul>
+</div>
 
 ## Education
 
@@ -194,7 +197,7 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
     </span>
   </li>
   <li>
-    <span class="when">Apr — Aug 2023</span>
+    <span class="when">2023</span>
     <span class="what">
       <span class="degree">Exchange, Mathematics</span><br>
       <span class="school"><img class="org-logo" src="{{ '/assets/img/logos/tum.png' | relative_url }}" alt="TUM logo">Technical University of Munich</span>
