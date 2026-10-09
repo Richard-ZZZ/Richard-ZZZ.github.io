@@ -241,6 +241,8 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   max-height: 178px;
   height: auto;
   mix-blend-mode: multiply;
+  opacity: 0.78;
+  filter: contrast(1.16) saturate(1.08);
 }
 
 .research-copy {
