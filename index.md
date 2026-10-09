@@ -98,16 +98,14 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
 
 <ul class="items">
   <li class="industry-item">
-    <span class="marker">&gt;</span>
-    <span class="tag muted">Intern</span>
+    <a class="company-logo" href="https://merl.com/" aria-label="Mitsubishi Electric Research Laboratories website">
+      <img src="{{ '/assets/img/logos/merl-logo.png' | relative_url }}" alt="MERL logo">
+    </a>
     <span class="body">
       <span class="title">Research Intern, Mitsubishi Electric Research Laboratories (MERL)</span>
       <span class="meta">Cambridge, MA · May 2026 — Now · Mentor: Dr. Dehong Liu</span>
       <span class="authors">Large language models for anomaly detection and predictive maintenance.</span>
     </span>
-    <a class="company-logo" href="https://merl.com/" aria-label="Mitsubishi Electric Research Laboratories website">
-      <img src="{{ '/assets/img/logos/merl-logo.png' | relative_url }}" alt="MERL logo">
-    </a>
   </li>
 </ul>
 
