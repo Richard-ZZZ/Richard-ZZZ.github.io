@@ -57,11 +57,11 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
 <ul class="report-list">
   <li>
     <a href="https://arxiv.org/abs/2606.02437">On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters</a>
-    <span>Technical Report · arXiv:2606.02437 · 2026</span>
+    <span>arXiv:2606.02437</span>
   </li>
   <li>
     <a href="https://arxiv.org/abs/2605.13779">MinT: Managed Infrastructure for Training and Serving Millions of LLMs</a>
-    <span>Technical Report · arXiv:2605.13779 · 2026</span>
+    <span>arXiv:2605.13779</span>
   </li>
 </ul>
 </div>
