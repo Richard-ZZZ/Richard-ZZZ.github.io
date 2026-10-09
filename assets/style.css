@@ -246,6 +246,8 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   transform-origin: center;
 }
 
+.research-card:nth-child(2) .research-figure img { transform: scale(1.04); }
+
 .research-copy {
   display: flex;
   flex-direction: column;
@@ -526,6 +528,7 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   .research-card { grid-template-columns: 1fr; }
   .research-figure { height: 176px; min-height: 176px; padding: 2px; border-right: 0; border-bottom: 1px solid var(--rule); }
   .research-figure img { max-height: 162px; transform: scale(1.15); }
+  .research-card:nth-child(2) .research-figure img { transform: scale(1.04); }
   .research-copy { padding: 17px 18px; }
   .research-copy h3 { font-size: 16px; }
   .publication-scroll { max-height: 340px; }
