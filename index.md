@@ -5,7 +5,7 @@ title: "Ruijia Zhang"
 
 <div class="profile">
   <div class="profile-photo">
-    <img src="{{ '/assets/img/profile-beach-football.jpg' | relative_url }}" alt="Ruijia Zhang balancing a football on the beach">
+    <img src="{{ '/assets/img/profile-beach-football-2.jpg' | relative_url }}" alt="Ruijia Zhang balancing a football on the beach">
   </div>
   <div class="profile-meta">
     <p class="name">Ruijia Zhang</p>
