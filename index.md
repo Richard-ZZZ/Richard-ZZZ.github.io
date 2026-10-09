@@ -20,59 +20,92 @@ title: "Ruijia Zhang"
 I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b> at <b>Johns Hopkins University</b>, working on the <b>theoretical foundations of AI</b>, using tools from probability theory and optimization to understand modern large language model training and alignment.
 </p>
 
-## Research
+## Selected Research
 
-<ul class="items">
-  <li>
-    <span class="marker">&gt;</span>
-    <span class="tag">Paper</span>
-    <span class="body">
-      <a class="title" href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}">Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR</a>
-      <span class="meta">ICML 2026 · with Meta Superintelligence Labs</span>
-      <span class="authors"><strong>Ruijia Zhang</strong>, Jiacheng Zhu, Andy Su, Hanqing Zhu, Laixi Shi</span>
-    </span>
-  </li>
+<p class="section-intro">A few projects that capture my current interests in neural-network scaling, parameter-efficient reinforcement learning, and reliable decision-making from observational data.</p>
 
-  <li>
-    <span class="marker">&gt;</span>
-    <span class="tag">Paper</span>
-    <span class="body">
-      <a class="title" href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a>
-      <span class="meta">Major Revision at JASA · <span class="award">🏆 ASA Nonparametric Best Student Paper, JSM 2026</span></span>
-      <span class="authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</span>
-    </span>
-  </li>
+<div class="research-showcase">
+  <article class="research-card">
+    <a class="research-figure" href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}" aria-label="Read Width and Depth Limits Commute during Training in Linear Residual Networks">
+      <img src="{{ '/assets/img/research/width-depth-commutativity.png' | relative_url }}" alt="Three width and depth scaling regimes converging to the same trained network output">
+    </a>
+    <div class="research-copy">
+      <span class="research-eyebrow">Neural network scaling · Preprint</span>
+      <h3><a href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">Width and Depth Limits Commute during Training in Linear Residual Networks</a></h3>
+      <p>Shows that, under the residual branch scaling used at initialization, taking width and depth to infinity in different orders leads to the same trained output limit.</p>
+      <p class="research-authors"><strong>Ruijia Zhang</strong>, Soufiane Hayou</p>
+      <a class="paper-link" href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">paper <span aria-hidden="true">↗</span></a>
+    </div>
+  </article>
 
-  <li>
-    <span class="marker">&gt;</span>
-    <span class="tag">Paper</span>
-    <span class="body">
-      <a class="title" href="https://arxiv.org/abs/2503.17865">Understanding Inverse Reinforcement Learning under Overparameterization</a>
-      <span class="meta">AISTATS 2025</span>
-      <span class="authors"><strong>Ruijia Zhang</strong>, Siliang Zeng, Chenliang Li, Alfredo Garcia, Mingyi Hong</span>
-    </span>
-  </li>
+  <article class="research-card">
+    <a class="research-figure" href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}" aria-label="Read Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR">
+      <img src="{{ '/assets/img/research/lora-initialization.png' | relative_url }}" alt="Comparison of LoRA, PiSSA, MiLoRA, LoRA-RLPO, and LoRA-RLMO initialization strategies">
+    </a>
+    <div class="research-copy">
+      <span class="research-eyebrow">LLM alignment · ICML 2026</span>
+      <h3><a href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}">Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR</a></h3>
+      <p>Explains why SVD-initialized LoRA variants can become unstable in RLVR and introduces orthonormal initializations that preserve pretrained geometry.</p>
+      <p class="research-authors"><strong>Ruijia Zhang</strong>, Jiacheng Zhu, Hanqing Zhu, Laixi Shi</p>
+      <a class="paper-link" href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}">paper <span aria-hidden="true">↗</span></a>
+    </div>
+  </article>
 
-  <li>
-    <span class="marker">&gt;</span>
-    <span class="tag">Paper</span>
-    <span class="body">
-      <a class="title" href="https://arxiv.org/abs/2503.18317">Improved Rates of Differentially Private Nonconvex–Strongly Concave Minimax Optimization via Gradient Differences</a>
-      <span class="meta">AAAI 2025</span>
-      <span class="authors"><strong>Ruijia Zhang</strong>, Mingxi Lei, Meng Ding, Zihang Xiang, Jinhui Xu, Di Wang</span>
-    </span>
-  </li>
+  <article class="research-card">
+    <a class="research-figure" href="https://arxiv.org/abs/2506.20406" aria-label="Read POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes">
+      <img src="{{ '/assets/img/research/polar-policy-value.png' | relative_url }}" alt="POLAR policy value across training iterations compared with offline reinforcement-learning baselines">
+    </a>
+    <div class="research-copy">
+      <span class="research-eyebrow">Offline RL · JASA minor revision</span>
+      <h3><a href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a></h3>
+      <p>Uses uncertainty-aware pessimism to learn dynamic treatment policies under partial data coverage, with finite-sample guarantees and strong empirical performance.</p>
+      <p class="research-authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</p>
+      <p class="research-award">🏆 ASA Nonparametric Best Student Paper, JSM 2026</p>
+      <a class="paper-link" href="https://arxiv.org/abs/2506.20406">paper <span aria-hidden="true">↗</span></a>
+    </div>
+  </article>
+</div>
 
+## Full Publication List
+
+<ol class="publication-list">
   <li>
-    <span class="marker">&gt;</span>
-    <span class="tag muted">WIP</span>
-    <span class="body">
-      <span class="title">Learning Optimal Robust Policies under Observational Data with Causal Transport</span>
-      <span class="meta">To be submitted to <em>Operations Research</em></span>
-      <span class="authors"><strong>Ruijia Zhang</strong>, Luhao Zhang, Michael Lingzhi Li</span>
-    </span>
+    <span class="pub-year">2027</span>
+    <span class="pub-entry"><a href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">Width and Depth Limits Commute during Training in Linear Residual Networks</a><span class="pub-venue">Submitted to ICLR 2027</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Soufiane Hayou</span></span>
   </li>
-</ul>
+  <li>
+    <span class="pub-year">2027</span>
+    <span class="pub-entry"><span class="pub-title">Sparse Target Calibration for Domain Adaptation: A Conditional Distributionally Robust View</span><span class="pub-venue">Submitted to ICLR 2027</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Dehong Liu, Mitsubishi Electric Research Laboratories</span></span>
+  </li>
+  <li>
+    <span class="pub-year">2026</span>
+    <span class="pub-entry"><a href="https://arxiv.org/abs/2606.02437">On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters</a><span class="pub-venue">arXiv:2606.02437</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Mind Lab</span></span>
+  </li>
+  <li>
+    <span class="pub-year">2026</span>
+    <span class="pub-entry"><a href="https://arxiv.org/abs/2605.13779">MinT: Managed Infrastructure for Training and Serving Millions of LLMs</a><span class="pub-venue">arXiv:2605.13779</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Mind Lab</span></span>
+  </li>
+  <li>
+    <span class="pub-year">2026</span>
+    <span class="pub-entry"><a href="{{ '/papers/ICML2026 _Camera_Ready.pdf' | relative_url }}">Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in Reinforcement Learning</a><span class="pub-venue">ICML 2026</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Jiacheng Zhu, Hanqing Zhu, Laixi Shi</span></span>
+  </li>
+  <li>
+    <span class="pub-year">WIP</span>
+    <span class="pub-entry"><span class="pub-title">Learning Optimal Robust Policies under Observational Data with Causal Transport</span><span class="pub-venue">In preparation for <em>Operations Research</em></span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Luhao Zhang, Michael Lingzhi Li</span></span>
+  </li>
+  <li>
+    <span class="pub-year">2026</span>
+    <span class="pub-entry"><a href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a><span class="pub-venue">Minor revision at JASA</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</span></span>
+  </li>
+  <li>
+    <span class="pub-year">2025</span>
+    <span class="pub-entry"><a href="https://arxiv.org/abs/2503.17865">Understanding Inverse Reinforcement Learning under Overparameterization: Non-Asymptotic Analysis and Global Optimality</a><span class="pub-venue">AISTATS 2025</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Mingyi Hong, Alfredo Garcia</span></span>
+  </li>
+  <li>
+    <span class="pub-year">2025</span>
+    <span class="pub-entry"><a href="https://arxiv.org/abs/2503.18317">Improved Rates of Differentially Private Nonconvex Strongly Concave Minimax Optimization via Gradient Differences</a><span class="pub-venue">AAAI 2025</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Mingxi Lei, Meng Ding, Zihang Xiang, Jinhui Xu, Di Wang</span></span>
+  </li>
+</ol>
 
 ## Industry Experience
 
@@ -180,4 +213,4 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
   </li>
 </ul>
 
-<p class="footnote">last updated · 2026-06-03</p>
+<p class="footnote">last updated · 2026-10-09</p>
