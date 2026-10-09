@@ -22,7 +22,7 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
 
 ## Selected Research
 
-<p class="section-intro">A few projects that capture my current interests in neural-network scaling, parameter-efficient reinforcement learning, and reliable decision-making from observational data.</p>
+<p class="section-intro">A few projects that capture my current interests in neural-network scaling and parameter-efficient reinforcement learning.</p>
 
 <div class="research-showcase">
   <article class="research-card">
@@ -51,30 +51,18 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
     </div>
   </article>
 
-  <article class="research-card">
-    <a class="research-figure" href="https://arxiv.org/abs/2506.20406" aria-label="Read POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes">
-      <img src="{{ '/assets/img/research/polar-policy-value.png' | relative_url }}" alt="POLAR policy value across training iterations compared with offline reinforcement-learning baselines">
-    </a>
-    <div class="research-copy">
-      <span class="research-eyebrow">Offline RL · JASA minor revision</span>
-      <h3><a href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a></h3>
-      <p>Uses uncertainty-aware pessimism to learn dynamic treatment policies under partial data coverage, with finite-sample guarantees and strong empirical performance.</p>
-      <p class="research-authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</p>
-      <p class="research-award">🏆 ASA Nonparametric Best Student Paper, JSM 2026</p>
-      <a class="paper-link" href="https://arxiv.org/abs/2506.20406">paper <span aria-hidden="true">↗</span></a>
-    </div>
-  </article>
 </div>
 
 ## Full Publication List
 
+<div class="publication-scroll" role="region" aria-label="Full publication list" tabindex="0">
 <ol class="publication-list">
   <li>
-    <span class="pub-year">2027</span>
+    <span class="pub-year">2026</span>
     <span class="pub-entry"><a href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">Width and Depth Limits Commute during Training in Linear Residual Networks</a><span class="pub-venue">Submitted to ICLR 2027</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Soufiane Hayou</span></span>
   </li>
   <li>
-    <span class="pub-year">2027</span>
+    <span class="pub-year">2026</span>
     <span class="pub-entry"><span class="pub-title">Sparse Target Calibration for Domain Adaptation: A Conditional Distributionally Robust View</span><span class="pub-venue">Submitted to ICLR 2027</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Dehong Liu, Mitsubishi Electric Research Laboratories</span></span>
   </li>
   <li>
@@ -95,7 +83,7 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
   </li>
   <li>
     <span class="pub-year">2026</span>
-    <span class="pub-entry"><a href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a><span class="pub-venue">Minor revision at JASA</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</span></span>
+    <span class="pub-entry"><a href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a><span class="pub-venue">Major Revision at JASA</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</span></span>
   </li>
   <li>
     <span class="pub-year">2025</span>
@@ -106,6 +94,7 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
     <span class="pub-entry"><a href="https://arxiv.org/abs/2503.18317">Improved Rates of Differentially Private Nonconvex Strongly Concave Minimax Optimization via Gradient Differences</a><span class="pub-venue">AAAI 2025</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Mingxi Lei, Meng Ding, Zihang Xiang, Jinhui Xu, Di Wang</span></span>
   </li>
 </ol>
+</div>
 
 ## Industry Experience
 
