@@ -20,7 +20,7 @@ title: "Ruijia Zhang"
 
 <p class="bio">
 I'm a PhD student in <strong>Applied Mathematics and Statistics</strong> at <strong>Johns Hopkins University</strong>, where I'm fortunate to be advised by <a href="https://www.soufianehayou.com/">Prof. Soufiane Hayou</a>.
-<br><br>
+<br>
 My research is driven by a broad interest in the <strong>science of AI</strong>: understanding how intelligence emerges, evolves, and scales, from individual neural networks to interacting multi-agent systems.
 </p>
 
