@@ -54,13 +54,13 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
   </article>
 
   <article class="research-card">
-    <a class="research-figure" href="{{ '/blog/bilevel-neat/' | relative_url }}" aria-label="Read Bi-Level Neuroevolution: Separating Topology Search from Weight Optimization">
-      <img src="{{ '/assets/img/blog/bilevel-neat/spiral-success.png' | relative_url }}" alt="Spiral dataset, learned decision boundary, and evolved heterogeneous neural network">
+    <a class="research-figure" href="{{ '/blog/bilevel-neat/' | relative_url }}" aria-label="Read How Intelligence Emerges: From Structural Growth to Synaptic Refinement">
+      <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}" alt="Animated neural network growing, pruning connections, and refining synaptic weights">
     </a>
     <div class="research-copy">
-      <span class="research-eyebrow">Neuroevolution · Technical blog</span>
-      <h3><a href="{{ '/blog/bilevel-neat/' | relative_url }}">Bi-Level Neuroevolution: Separating Topology Search from Weight Optimization</a></h3>
-      <p>A practical study of NEAT with CMA-ES and backpropagation, from SlimeVolley control to compact classifiers with heterogeneous activations.</p>
+      <span class="research-eyebrow">Science of AI · Neurodevelopment</span>
+      <h3><a href="{{ '/blog/bilevel-neat/' | relative_url }}">How Intelligence Emerges: From Structural Growth to Synaptic Refinement</a></h3>
+      <p>A computational study of emergence across two timescales: structural growth and pruning, followed by synaptic weight refinement.</p>
       <p class="research-authors"><strong>Ruijia Zhang</strong></p>
       <a class="paper-link" href="{{ '/blog/bilevel-neat/' | relative_url }}">read the blog <span aria-hidden="true">↗</span></a>
     </div>

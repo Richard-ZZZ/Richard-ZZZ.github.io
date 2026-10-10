@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="title desc">
+  <title id="title">From structural growth to synaptic refinement</title>
+  <desc id="desc">An animated neural network grows neurons and connections, prunes weak synapses, and then refines the strengths of the surviving connections.</desc>
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .label { fill: #24333d; font-size: 18px; font-weight: 650; letter-spacing: .01em; }
+    .small { fill: #66747c; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+    .guide { fill: none; stroke: #d9d2c3; stroke-width: 1.5; }
+    .survive, .prune, .refine { fill: none; stroke-linecap: round; pathLength: 1; }
+    .survive { stroke: #7f9bb0; stroke-width: 2.2; stroke-dasharray: 1; animation: grow 12s ease-in-out infinite; }
+    .prune { stroke: #cf8066; stroke-width: 1.6; stroke-dasharray: 5 7; animation: prune 12s ease-in-out infinite; }
+    .refine { stroke: #0f6785; opacity: 0; animation: refine 12s ease-in-out infinite; }
+    .refine.warm { stroke: #b45309; }
+    .node { fill: #fffdf8; stroke: #476e86; stroke-width: 2.2; transform-box: fill-box; transform-origin: center; animation: nodeIn 12s ease-in-out infinite; }
+    .node.late { animation-name: nodeLate; }
+    .node.output { stroke: #9a4b08; }
+    .phase-a { animation: phaseA 12s ease-in-out infinite; }
+    .phase-b { opacity: .28; animation: phaseB 12s ease-in-out infinite; }
+    .pulse { fill: none; stroke: #e7a15b; stroke-width: 2; opacity: 0; animation: pulse 12s ease-out infinite; }
+    @keyframes grow {
+      0%, 8% { stroke-dashoffset: 1; opacity: 0; }
+      25%, 48% { stroke-dashoffset: 0; opacity: .72; }
+      56%, 100% { stroke-dashoffset: 0; opacity: .32; }
+    }
+    @keyframes prune {
+      0%, 16% { opacity: 0; }
+      27%, 39% { opacity: .75; }
+      50%, 100% { opacity: 0; }
+    }
+    @keyframes refine {
+      0%, 51% { opacity: 0; stroke-width: 1.5; }
+      60% { opacity: .58; stroke-width: 2; }
+      72% { opacity: .95; stroke-width: 5.5; }
+      84% { opacity: .7; stroke-width: 3; }
+      96%, 100% { opacity: .92; stroke-width: 4.2; }
+    }
+    @keyframes nodeIn {
+      0%, 7% { opacity: .2; transform: scale(.74); }
+      18%, 100% { opacity: 1; transform: scale(1); }
+    }
+    @keyframes nodeLate {
+      0%, 19% { opacity: 0; transform: scale(.45); }
+      31%, 100% { opacity: 1; transform: scale(1); }
+    }
+    @keyframes phaseA { 0%, 47% { opacity: 1; } 55%, 100% { opacity: .28; } }
+    @keyframes phaseB { 0%, 48% { opacity: .28; } 58%, 100% { opacity: 1; } }
+    @keyframes pulse {
+      0%, 59% { opacity: 0; r: 13px; }
+      67% { opacity: .75; r: 13px; }
+      75% { opacity: 0; r: 28px; }
+      100% { opacity: 0; r: 28px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-play-state: paused !important; }
+    }
+  </style>
+
+  <g opacity=".96">
+    <rect x="44" y="34" width="408" height="52" rx="26" fill="#fffaf1" stroke="#dbc9aa"/>
+    <circle cx="75" cy="60" r="8" fill="#b45309"/>
+    <text class="label phase-a" x="96" y="66">Structural growth &amp; pruning</text>
+    <rect x="508" y="34" width="408" height="52" rx="26" fill="#f4fafb" stroke="#b9ced7"/>
+    <circle cx="539" cy="60" r="8" fill="#0f6785"/>
+    <text class="label phase-b" x="560" y="66">Synaptic weight refinement</text>
+    <path class="guide" d="M452 60H508"/>
+  </g>
+
+  <text class="small" x="92" y="135">sensory signals</text>
+  <text class="small" x="394" y="135">developing circuit</text>
+  <text class="small" x="765" y="135">behavior</text>
+
+  <g>
+    <path class="survive" d="M140 186C230 174 274 182 350 206"/>
+    <path class="survive" d="M140 186C228 210 286 274 360 300"/>
+    <path class="survive" d="M140 250C230 238 275 208 350 206"/>
+    <path class="survive" d="M140 250C230 250 285 250 360 252"/>
+    <path class="survive" d="M140 314C226 298 278 265 360 252"/>
+    <path class="survive" d="M140 314C235 330 282 316 360 300"/>
+    <path class="survive" d="M350 206C430 182 477 190 548 214"/>
+    <path class="survive" d="M350 206C430 222 477 271 548 286"/>
+    <path class="survive" d="M360 252C435 248 478 228 548 214"/>
+    <path class="survive" d="M360 252C432 257 482 274 548 286"/>
+    <path class="survive" d="M360 300C432 300 483 296 548 286"/>
+    <path class="survive" d="M548 214C635 214 684 230 786 250"/>
+    <path class="survive" d="M548 286C636 286 686 270 786 250"/>
+
+    <path class="prune" d="M140 186C242 225 286 300 360 300"/>
+    <path class="prune" d="M140 250C235 279 278 301 360 300"/>
+    <path class="prune" d="M140 314C230 274 280 214 350 206"/>
+    <path class="prune" d="M350 206C430 244 481 290 548 286"/>
+    <path class="prune" d="M360 300C438 256 485 221 548 214"/>
+    <path class="prune" d="M360 252C450 211 497 177 604 180"/>
+    <path class="prune" d="M604 180C677 184 726 220 786 250"/>
+  </g>
+
+  <g>
+    <path class="refine" d="M140 186C230 174 274 182 350 206"/>
+    <path class="refine warm" d="M140 250C230 250 285 250 360 252"/>
+    <path class="refine" d="M140 314C235 330 282 316 360 300"/>
+    <path class="refine warm" d="M350 206C430 182 477 190 548 214"/>
+    <path class="refine" d="M360 252C432 257 482 274 548 286"/>
+    <path class="refine warm" d="M548 214C635 214 684 230 786 250"/>
+    <path class="refine" d="M548 286C636 286 686 270 786 250"/>
+  </g>
+
+  <g>
+    <circle class="node" cx="140" cy="186" r="14"/>
+    <circle class="node" cx="140" cy="250" r="14"/>
+    <circle class="node" cx="140" cy="314" r="14"/>
+    <circle class="node late" cx="350" cy="206" r="16"/>
+    <circle class="node late" cx="360" cy="252" r="16"/>
+    <circle class="node late" cx="360" cy="300" r="16"/>
+    <circle class="node late" cx="548" cy="214" r="17"/>
+    <circle class="node late" cx="548" cy="286" r="17"/>
+    <circle class="node late" cx="604" cy="180" r="11" opacity=".45"/>
+    <circle class="node output" cx="786" cy="250" r="19"/>
+    <circle class="pulse" cx="786" cy="250" r="13"/>
+  </g>
+
+  <g transform="translate(204 398)">
+    <circle cx="0" cy="0" r="5" fill="#476e86"/><text class="small" x="14" y="4">grow</text>
+    <path class="guide" d="M78 0h52"/><path d="M125-5l7 5-7 5" fill="none" stroke="#9d917d" stroke-width="1.5"/>
+    <circle cx="160" cy="0" r="5" fill="#7f9bb0"/><text class="small" x="174" y="4">connect</text>
+    <path class="guide" d="M264 0h52"/><path d="M311-5l7 5-7 5" fill="none" stroke="#9d917d" stroke-width="1.5"/>
+    <circle cx="346" cy="0" r="5" fill="#cf8066"/><text class="small" x="360" y="4">prune</text>
+    <path class="guide" d="M438 0h52"/><path d="M485-5l7 5-7 5" fill="none" stroke="#9d917d" stroke-width="1.5"/>
+    <circle cx="520" cy="0" r="5" fill="#0f6785"/><text class="small" x="534" y="4">refine</text>
+  </g>
+</svg>
