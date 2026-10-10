@@ -19,7 +19,9 @@ title: "Ruijia Zhang"
 </div>
 
 <p class="bio">
-I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b> at <b>Johns Hopkins University</b>, working on the <b>theoretical foundations of AI</b>, using tools from probability theory and optimization to understand modern large language model training and alignment.
+I'm a PhD student in <strong>Applied Mathematics and Statistics</strong> at <strong>Johns Hopkins University</strong>, where I'm fortunate to be advised by <a href="https://www.soufianehayou.com/">Prof. Soufiane Hayou</a>.
+<br><br>
+My research is driven by a broad interest in the <strong>science of AI</strong>: understanding how intelligence emerges, evolves, and scales, from individual neural networks to interacting multi-agent systems.
 </p>
 
 ## Selected Research
@@ -53,9 +55,9 @@ I'm a PhD student in the <b>Department of Applied Mathematics and Statistics</b>
 
 </div>
 
-## Technical Reports
+## Technical Reports on Scalable LLM Systems
 
-<div class="report-scroll" role="region" aria-label="Technical reports" tabindex="0">
+<div class="report-scroll" role="region" aria-label="Technical reports on scalable LLM systems" tabindex="0">
 <ul class="report-list">
   <li>
     <a href="https://arxiv.org/abs/2606.02437">On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters</a>
