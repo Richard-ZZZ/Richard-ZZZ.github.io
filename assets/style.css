@@ -267,6 +267,10 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   width: min(100%, 760px);
 }
 
+.research-card:nth-child(3) .research-figure img {
+  width: min(100%, 760px);
+}
+
 .research-copy {
   display: flex;
   flex-direction: column;
@@ -310,6 +314,134 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
 }
 
 .paper-link:hover { text-decoration: underline; }
+
+/* ---------- Technical blog ---------- */
+.blog-article {
+  width: 100%;
+  max-width: 800px;
+  color: #222;
+}
+
+.blog-back {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--accent);
+  font-family: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.blog-header {
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(210, 201, 183, 0.9);
+}
+
+.blog-kicker {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-family: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.blog-article h1 {
+  max-width: 24ch;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.14;
+}
+
+.blog-deck {
+  max-width: 65ch;
+  margin: 14px 0 0;
+  color: #3d3d3d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.blog-meta {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.blog-article h2 {
+  margin-top: 42px;
+}
+
+.blog-article h3 {
+  margin-top: 28px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.blog-article p,
+.blog-article li {
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.blog-article ul,
+.blog-article ol {
+  padding-left: 1.35rem;
+}
+
+.blog-figure {
+  margin: 28px 0;
+}
+
+.blog-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(210, 201, 183, 0.82);
+  border-radius: 10px;
+  background: #fffefb;
+}
+
+.blog-figure figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.blog-callout {
+  margin: 28px 0;
+  padding: 16px 18px;
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 254, 251, 0.62);
+}
+
+.blog-callout p { margin: 0; }
+
+.blog-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0;
+}
+
+.blog-article table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.blog-article th,
+.blog-article td {
+  padding: 9px 10px;
+  border-bottom: 1px solid rgba(210, 201, 183, 0.82);
+  text-align: left;
+}
+
+.blog-article th {
+  color: var(--section);
+  font-weight: 600;
+}
 
 /* ---------- Full publication list ---------- */
 .publication-scroll {
@@ -573,10 +705,13 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   #technical-reports-on-scalable-llm-systems { white-space: normal; }
   .bio { font-size: 14.5px; line-height: 1.65; }
   .research-figure img,
-  .research-card:nth-child(2) .research-figure img { width: 100%; }
+  .research-card:nth-child(2) .research-figure img,
+  .research-card:nth-child(3) .research-figure img { width: 100%; }
   .research-copy { padding: 17px 18px; }
   .research-copy h3 { font-size: 16px; line-height: 1.4; }
   .research-copy p { font-size: 14px; }
+  .blog-article h1 { font-size: 30px; }
+  .blog-deck { font-size: 15px; }
   .publication-scroll { max-height: 340px; }
   .publication-list li { grid-template-columns: 42px minmax(0, 1fr); gap: 10px; padding-inline: 4px; }
   .industry-item { align-items: flex-start !important; }

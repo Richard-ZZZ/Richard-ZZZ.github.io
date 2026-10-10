@@ -53,6 +53,19 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
     </div>
   </article>
 
+  <article class="research-card">
+    <a class="research-figure" href="{{ '/blog/bilevel-neat/' | relative_url }}" aria-label="Read Bi-Level Neuroevolution: Separating Topology Search from Weight Optimization">
+      <img src="{{ '/assets/img/blog/bilevel-neat/spiral-success.png' | relative_url }}" alt="Spiral dataset, learned decision boundary, and evolved heterogeneous neural network">
+    </a>
+    <div class="research-copy">
+      <span class="research-eyebrow">Neuroevolution · Technical blog</span>
+      <h3><a href="{{ '/blog/bilevel-neat/' | relative_url }}">Bi-Level Neuroevolution: Separating Topology Search from Weight Optimization</a></h3>
+      <p>A practical study of NEAT with CMA-ES and backpropagation, from SlimeVolley control to compact classifiers with heterogeneous activations.</p>
+      <p class="research-authors"><strong>Ruijia Zhang</strong></p>
+      <a class="paper-link" href="{{ '/blog/bilevel-neat/' | relative_url }}">read the blog <span aria-hidden="true">↗</span></a>
+    </div>
+  </article>
+
 </div>
 
 ## Technical Reports on Scalable LLM Systems
