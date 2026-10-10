@@ -15,8 +15,8 @@ permalink: /blog/bilevel-neat/
   </header>
 
 <figure class="blog-figure blog-hero-animation">
-  <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}?v=20261009-2" alt="Animated neurodevelopment analogy showing neurogenesis, synaptogenesis, synaptic pruning, and synaptic plasticity">
-  <figcaption>Neurodevelopment analogy from the report: Phase 1 represents neurogenesis, synaptogenesis, and the pruning of weak connections; Phase 2 keeps the structure largely fixed while useful synapses continue to change strength.</figcaption>
+  <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}?v=20261009-3" alt="Animated neural-network topology exploration followed by weight optimization">
+  <figcaption>The two-phase strategy from the report: Phase 1 explores network topology by adding and pruning nodes and connections; Phase 2 fixes the topology while continuing to optimize connection weights.</figcaption>
 </figure>
 
 ## The question: how can intelligence emerge?

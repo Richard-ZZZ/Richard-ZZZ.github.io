@@ -1,58 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
-  <title id="title">Neurodevelopment analogy: topology exploration and weight refinement</title>
-  <desc id="desc">Neurons develop branching dendrites and axons, form abundant synapses, prune weak connections, then retain a stable structure while synaptic strength continues to change.</desc>
-  <defs>
-    <radialGradient id="soma" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff8ef"/><stop offset=".7" stop-color="#e9b77f"/><stop offset="1" stop-color="#c9783f"/></radialGradient>
-    <radialGradient id="nucleus" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#c7e7ed"/><stop offset="1" stop-color="#4b8392"/></radialGradient>
-    <linearGradient id="axon" x1="0" x2="1"><stop offset="0" stop-color="#9a5937"/><stop offset="1" stop-color="#276f7f"/></linearGradient>
-    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#4c3424" flood-opacity=".14"/></filter>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+  <title id="title">Topology exploration followed by weight optimization</title>
+  <desc id="desc">The first phase adds and prunes neural-network nodes and connections. In the second phase, the topology remains fixed while connection weights continue to update.</desc>
   <style>
     text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .phase { fill: #273642; font-size: 20px; font-weight: 700; }.period { fill: #6e7a82; font-size: 13px; letter-spacing: .06em; }
-    .stage { fill: #8b4d25; font-size: 14px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }.note { fill: #68747b; font-size: 13px; }
-    .neurite { fill: none; stroke: #9a5937; stroke-linecap: round; stroke-linejoin: round; }.dendrite { stroke-width: 5; }.twig { stroke-width: 3; }.axon { stroke: url(#axon); stroke-width: 5; }
-    .grow { stroke-dasharray: 1; stroke-dashoffset: 1; animation: grow 14s ease-in-out infinite; }.grow-late { stroke-dasharray: 1; stroke-dashoffset: 1; animation: growLate 14s ease-in-out infinite; }
-    .cell { opacity: 0; animation: cellIn 14s ease-in-out infinite; }.cell.late { animation-name: cellLate; }
-    .weak { fill: none; stroke: #c76862; stroke-width: 2.4; stroke-linecap: round; stroke-dasharray: 7 8; animation: prune 14s ease-in-out infinite; }
-    .synapse { opacity: 0; transform-box: fill-box; transform-origin: center; animation: synapseIn 14s ease-in-out infinite; }.synapse.pruned { animation: synapsePrune 14s ease-in-out infinite; }
-    .phase-one { animation: phaseOne 14s ease-in-out infinite; }.phase-two { opacity: .3; animation: phaseTwo 14s ease-in-out infinite; }
-    .transmitter { opacity: 0; animation: release 2.2s ease-in infinite; }.transmitter.t2 { animation-delay: .45s; }.transmitter.t3 { animation-delay: .9s; }.transmitter.t4 { animation-delay: 1.35s; }
-    .receptor { animation: receptor 14s ease-in-out infinite; }.synaptic-glow { opacity: 0; animation: plasticity 14s ease-in-out infinite; }.divider { stroke: #d8cdbd; stroke-width: 1.3; stroke-dasharray: 3 7; }
-    @keyframes cellIn { 0%,5% { opacity:.55; } 13%,100% { opacity:1; } } @keyframes cellLate { 0%,12% { opacity:.16; } 22%,100% { opacity:1; } }
-    @keyframes grow { 0%,9% { stroke-dashoffset:.82; opacity:.2; } 25%,100% { stroke-dashoffset:0; opacity:1; } } @keyframes growLate { 0%,18% { stroke-dashoffset:1; opacity:.08; } 35%,100% { stroke-dashoffset:0; opacity:1; } }
-    @keyframes synapseIn { 0%,27% { opacity:0; transform:scale(.2); } 38%,100% { opacity:1; transform:scale(1); } } @keyframes prune { 0%,25% { opacity:0; } 36%,46% { opacity:.9; } 57%,100% { opacity:0; } }
-    @keyframes synapsePrune { 0%,29% { opacity:0; transform:scale(.2); } 38%,46% { opacity:1; transform:scale(1); } 56%,100% { opacity:0; transform:scale(.15); } }
-    @keyframes phaseOne { 0%,53% { opacity:1; } 62%,100% { opacity:.3; } } @keyframes phaseTwo { 0%,52% { opacity:.3; } 62%,100% { opacity:1; } }
-    @keyframes release { 0%,18% { opacity:0; transform:translateY(-8px); } 32% { opacity:1; } 76% { opacity:.9; } 100% { opacity:0; transform:translateY(38px); } }
-    @keyframes receptor { 0%,54% { stroke-width:3; } 68%,84% { stroke-width:7; } 100% { stroke-width:4; } } @keyframes plasticity { 0%,55% { opacity:0; } 68% { opacity:.8; } 78% { opacity:.15; } 89% { opacity:.7; } 100% { opacity:.25; } }
-    @media (prefers-reduced-motion: reduce) { * { animation-play-state: paused !important; } }
+    .phase-title { fill:#243440; font-size:21px; font-weight:700; }
+    .phase-sub { fill:#6b7880; font-size:13px; }
+    .caption { fill:#51636d; font-size:13px; font-weight:600; letter-spacing:.025em; }
+    .panel { fill:#fffdf9; fill-opacity:.52; stroke:#d8cdbd; stroke-width:1.2; }
+    .edge { fill:none; stroke:#93aabe; stroke-width:2.2; stroke-linecap:round; }
+    .base-edge { animation:baseEdge 12s ease-in-out infinite; }
+    .new-edge { stroke:#4f8db8; stroke-dasharray:1; stroke-dashoffset:1; animation:newEdge 12s ease-in-out infinite; }
+    .pruned-edge { stroke:#c7735f; stroke-width:2; stroke-dasharray:6 7; animation:pruneEdge 12s ease-in-out infinite; }
+    .node { fill:#fffdf9; stroke:#4c7590; stroke-width:2.5; }
+    .input { fill:#edf6fa; }
+    .output { fill:#fff3e8; stroke:#a85c32; }
+    .new-node { opacity:0; animation:newNode 12s ease-in-out infinite; }
+    .fixed { fill:none; stroke-linecap:round; }
+    .w1 { animation:weightOne 12s ease-in-out infinite; }
+    .w2 { animation:weightTwo 12s ease-in-out infinite; }
+    .w3 { animation:weightThree 12s ease-in-out infinite; }
+    .w4 { animation:weightFour 12s ease-in-out infinite; }
+    .phase-one { animation:phaseOne 12s ease-in-out infinite; }
+    .phase-two { animation:phaseTwo 12s ease-in-out infinite; }
+    .flow { fill:none; stroke:#a99d8d; stroke-width:1.5; }
+    @keyframes baseEdge { 0%,100%{opacity:.72} 44%{opacity:.34} 58%{opacity:.72} }
+    @keyframes newNode { 0%,12%{opacity:0} 23%,100%{opacity:1} }
+    @keyframes newEdge { 0%,18%{stroke-dashoffset:1;opacity:0} 34%,100%{stroke-dashoffset:0;opacity:.92} }
+    @keyframes pruneEdge { 0%,20%{opacity:0} 34%,48%{opacity:.85} 58%,100%{opacity:0} }
+    @keyframes phaseOne { 0%,48%{opacity:1} 58%,100%{opacity:.42} }
+    @keyframes phaseTwo { 0%,48%{opacity:.42} 58%,100%{opacity:1} }
+    @keyframes weightOne { 0%,50%{stroke:#9bb0bf;stroke-width:2} 62%{stroke:#2c7897;stroke-width:6} 78%{stroke:#d08048;stroke-width:3} 94%,100%{stroke:#2c7897;stroke-width:5} }
+    @keyframes weightTwo { 0%,50%{stroke:#9bb0bf;stroke-width:2} 64%{stroke:#d08048;stroke-width:3} 80%{stroke:#2c7897;stroke-width:6} 94%,100%{stroke:#86a9b7;stroke-width:2.5} }
+    @keyframes weightThree { 0%,50%{stroke:#9bb0bf;stroke-width:2} 66%{stroke:#86a9b7;stroke-width:2} 82%{stroke:#d08048;stroke-width:5.5} 94%,100%{stroke:#2c7897;stroke-width:3.5} }
+    @keyframes weightFour { 0%,50%{stroke:#9bb0bf;stroke-width:2} 68%{stroke:#2c7897;stroke-width:3.5} 84%{stroke:#86a9b7;stroke-width:1.5} 94%,100%{stroke:#d08048;stroke-width:5} }
+    @media (prefers-reduced-motion:reduce) { * { animation-play-state:paused !important; } }
   </style>
-  <g class="phase-one"><rect x="30" y="24" width="728" height="64" rx="18" fill="#fffaf2" fill-opacity=".76" stroke="#dbc8ae"/><circle cx="60" cy="48" r="7" fill="#b65c2d"/><text class="phase" x="78" y="54">Phase 1: Topology Exploration</text><text class="period" x="78" y="74">EARLY LIFE TO ADOLESCENCE</text></g>
-  <g class="phase-two"><rect x="782" y="24" width="388" height="64" rx="18" fill="#f4fafb" fill-opacity=".78" stroke="#b6ced4"/><circle cx="812" cy="48" r="7" fill="#27788a"/><text class="phase" x="830" y="54">Phase 2: Weight Refinement</text><text class="period" x="830" y="74">ADULTHOOD</text></g>
-  <line class="divider" x1="768" y1="110" x2="768" y2="520"/>
-  <g class="phase-one"><text class="stage" x="48" y="126">Neurogenesis</text><text class="note" x="48" y="146">rapid production of neurons</text><text class="stage" x="287" y="126">Synaptogenesis</text><text class="note" x="287" y="146">abundant synaptic connections form</text><text class="stage" x="555" y="126">Synaptic pruning</text><text class="note" x="555" y="146">weak synapses are pruned</text></g>
-  <g class="cell" transform="translate(180 302)" filter="url(#shadow)">
-    <path class="neurite dendrite grow" pathLength="1" d="M-22-5C-75-30-94-72-128-100M-72-47l-50 3M-91-68l-20-38M-20-15C-64 12-87 51-124 72M-69 26l-49-10M-88 46l-27 39M-4-25C-22-74-5-105-22-140M-15-88l42-33"/><path class="neurite twig grow-late" pathLength="1" d="M-128-100l-22-24m22 24l-2-31m6 87l-29-18m31 18l-18 23m16 93l-31 1m31-1l-18 27m27-184l32-16m-32 16l-4-31"/><path class="neurite axon grow" pathLength="1" d="M22 5C95 10 134-19 202-7S300 35 359 13"/><path d="M-25-12C-29-39 6-50 29-28C50-8 38 25 11 37C-17 48-42 18-25-12Z" fill="url(#soma)" stroke="#9a5937" stroke-width="2"/><ellipse cx="4" cy="-2" rx="13" ry="16" fill="url(#nucleus)" opacity=".9"/>
-  </g>
-  <g class="cell late" transform="translate(455 230)" filter="url(#shadow)">
-    <path class="neurite dendrite grow-late" pathLength="1" d="M-20-8C-58-42-58-78-73-117M-54-67l-45-26M-58-80l20-43M2-30C17-72 43-88 62-125M35-83l40-22M22 25C34 66 20 96 27 130M25 82l-39 34"/><path class="neurite twig grow-late" pathLength="1" d="M-73-117l-30-15m30 15l18-29m117 21l-3-35m3 35l32-16m-67 171l28 30m-28-30l-23 34"/><path class="neurite axon grow-late" pathLength="1" d="M25 7C83 17 105 57 151 67S218 55 261 83"/><path d="M-29-8C-28-34 3-49 26-30C52-10 39 22 17 36C-12 53-45 23-29-8Z" fill="url(#soma)" stroke="#9a5937" stroke-width="2"/><ellipse cx="3" cy="-3" rx="13" ry="16" fill="url(#nucleus)" opacity=".9"/>
-  </g>
-  <g class="cell late" transform="translate(498 414) scale(.86)" filter="url(#shadow)">
-    <path class="neurite dendrite grow-late" pathLength="1" d="M-20-8C-60-35-83-72-91-111M-65-68l-43-10M-14-24C-17-69 6-88 4-122M0-84l35-28M20 19C58 47 77 76 103 105"/><path class="neurite twig grow-late" pathLength="1" d="M-91-111l-25-24m25 24l20-28M4-122l-17-32m17 32l29-24m70 251l3 31m-3-31l31 8"/><path class="neurite axon grow-late" pathLength="1" d="M24 2C78-6 118-34 168-28S225 1 264-12"/><path d="M-27-10C-33-35 1-48 25-30C50-8 38 21 15 35C-12 51-43 19-27-10Z" fill="url(#soma)" stroke="#9a5937" stroke-width="2"/><ellipse cx="3" cy="-3" rx="13" ry="16" fill="url(#nucleus)" opacity=".9"/>
-  </g>
-  <g class="phase-one"><path class="weak" d="M202 293C320 300 355 355 479 394"/><path class="weak" d="M202 303C326 391 421 387 640 384"/><path class="weak" d="M475 252C538 298 606 295 722 290"/><path class="weak" d="M480 213C555 180 622 206 710 240"/><g class="synapse pruned" fill="#d57566" stroke="#fffaf2" stroke-width="2"><circle cx="479" cy="394" r="8"/><circle cx="640" cy="384" r="8"/><circle cx="722" cy="290" r="8"/><circle cx="710" cy="240" r="8"/></g><g class="synapse" fill="#26788a" stroke="#fffaf2" stroke-width="2"><circle cx="382" cy="295" r="9"/><circle cx="539" cy="314" r="9"/><circle cx="649" cy="296" r="9"/><circle cx="666" cy="402" r="9"/></g></g>
-  <g class="phase-two">
-    <text class="stage" x="814" y="126">Synaptic plasticity</text><text class="note" x="814" y="146">structure largely fixed; plasticity continues</text>
-    <g transform="translate(800 174)">
-      <path d="M32 0C70 40 87 61 102 112" fill="none" stroke="#9a5937" stroke-width="12" stroke-linecap="round"/><path d="M80 105C88 79 126 75 149 94C168 111 165 148 142 164C119 180 87 165 78 141C74 130 75 117 80 105Z" fill="url(#soma)" stroke="#9a5937" stroke-width="2"/>
-      <circle cx="105" cy="112" r="7" fill="#fff8ef" stroke="#a25a39"/><circle cx="132" cy="111" r="6" fill="#fff8ef" stroke="#a25a39"/><circle cx="96" cy="137" r="6" fill="#fff8ef" stroke="#a25a39"/><circle cx="127" cy="143" r="7" fill="#fff8ef" stroke="#a25a39"/><text class="note" x="49" y="190">presynaptic terminal</text>
-      <path d="M198 225C198 187 207 161 231 150C253 139 259 115 256 78" fill="none" stroke="#5f8b95" stroke-width="16" stroke-linecap="round"/><path d="M231 150C207 143 193 134 182 117C172 101 178 83 195 79C216 73 236 92 239 115" fill="#c7e7ed" stroke="#4b8392" stroke-width="3"/><text class="note" x="197" y="247">postsynaptic spine</text>
-      <path d="M144 174C160 182 174 182 190 174" fill="none" stroke="#b8aaa0" stroke-width="1.5" stroke-dasharray="3 4"/><text class="note" x="128" y="208">synaptic cleft</text><circle class="synaptic-glow" cx="168" cy="157" r="43" fill="none" stroke="#e5a352" stroke-width="8" filter="url(#softGlow)"/>
-      <g fill="#d56e3f"><circle class="transmitter" cx="153" cy="157" r="4"/><circle class="transmitter t2" cx="165" cy="153" r="4"/><circle class="transmitter t3" cx="176" cy="157" r="4"/><circle class="transmitter t4" cx="184" cy="152" r="4"/></g><g fill="none" stroke="#1f7587" stroke-linecap="round"><path class="receptor" d="M199 132v18"/><path class="receptor" d="M210 128v18"/><path class="receptor" d="M221 131v18"/></g>
-      <path d="M106 112C126 122 137 137 145 153" fill="none" stroke="#e9a257" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 6"><animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.4s" repeatCount="indefinite"/></path>
+
+  <rect class="panel" x="22" y="20" width="566" height="426" rx="18"/>
+  <rect class="panel" x="612" y="20" width="566" height="426" rx="18"/>
+
+  <g class="phase-one">
+    <circle cx="54" cy="56" r="7" fill="#4f8db8"/>
+    <text class="phase-title" x="72" y="63">Phase 1: Topology Exploration</text>
+    <text class="phase-sub" x="54" y="87">nodes and connections are added, tested, and pruned</text>
+    <text class="caption" x="54" y="414">STRUCTURE CHANGES</text>
+
+    <path class="edge base-edge" d="M92 168C176 162 213 178 282 218M92 235C172 224 215 215 282 218M92 302C175 292 213 263 282 252M282 218C359 201 392 194 486 210M282 252C365 258 405 255 486 244"/>
+    <path class="edge new-edge" pathLength="1" d="M92 168C183 193 215 249 282 286M92 302C172 310 216 298 282 286M282 218C354 231 405 239 486 244M282 286C365 289 411 275 486 244"/>
+    <path class="pruned-edge" d="M92 235C181 269 218 286 282 286M92 302C184 239 218 226 282 218M282 252C363 222 407 213 486 210"/>
+
+    <g>
+      <circle class="node input" cx="92" cy="168" r="14"/><circle class="node input" cx="92" cy="235" r="14"/><circle class="node input" cx="92" cy="302" r="14"/>
+      <circle class="node" cx="282" cy="218" r="15"/><circle class="node new-node" cx="282" cy="252" r="15"/><circle class="node new-node" cx="282" cy="286" r="15"/>
+      <circle class="node output" cx="486" cy="210" r="16"/><circle class="node output new-node" cx="486" cy="244" r="16"/>
+    </g>
+
+    <g transform="translate(326 408)">
+      <circle cx="0" cy="0" r="5" fill="#4f8db8"/><text class="phase-sub" x="12" y="4">add</text>
+      <path class="flow" d="M52 0h30m-6-5l7 5-7 5"/>
+      <circle cx="104" cy="0" r="5" fill="#c7735f"/><text class="phase-sub" x="116" y="4">prune</text>
     </g>
   </g>
-  <g transform="translate(50 525)"><circle cx="0" cy="0" r="5" fill="#b65c2d"/><text class="note" x="13" y="4">neurons multiply</text><path d="M118 0h42" stroke="#b9afa2"/><path d="M155-4l6 4-6 4" fill="none" stroke="#b9afa2"/><circle cx="180" cy="0" r="5" fill="#9a5937"/><text class="note" x="193" y="4">synapses form</text><path d="M296 0h42" stroke="#b9afa2"/><path d="M333-4l6 4-6 4" fill="none" stroke="#b9afa2"/><circle cx="358" cy="0" r="5" fill="#c76862"/><text class="note" x="371" y="4">weak synapses prune</text><path d="M512 0h42" stroke="#b9afa2"/><path d="M549-4l6 4-6 4" fill="none" stroke="#b9afa2"/><circle cx="574" cy="0" r="5" fill="#27788a"/><text class="note" x="587" y="4">useful synapses strengthen</text></g>
+
+  <g class="phase-two">
+    <circle cx="644" cy="56" r="7" fill="#27778b"/>
+    <text class="phase-title" x="662" y="63">Phase 2: Weight Optimization</text>
+    <text class="phase-sub" x="644" y="87">topology fixed · connection weights continue to update</text>
+    <text class="caption" x="644" y="414">WEIGHTS UPDATE</text>
+
+    <path class="fixed w1" d="M682 168C762 163 803 181 854 218M682 235C760 225 802 216 854 218M682 302C759 292 802 266 854 252"/>
+    <path class="fixed w2" d="M682 168C766 195 806 251 854 286M682 235C758 249 805 254 854 252M682 302C765 312 805 299 854 286"/>
+    <path class="fixed w3" d="M854 218C930 201 970 194 1074 210M854 252C930 258 980 254 1074 244"/>
+    <path class="fixed w4" d="M854 218C929 232 978 240 1074 244M854 286C932 289 983 274 1074 244"/>
+
+    <g>
+      <circle class="node input" cx="682" cy="168" r="14"/><circle class="node input" cx="682" cy="235" r="14"/><circle class="node input" cx="682" cy="302" r="14"/>
+      <circle class="node" cx="854" cy="218" r="15"/><circle class="node" cx="854" cy="252" r="15"/><circle class="node" cx="854" cy="286" r="15"/>
+      <circle class="node output" cx="1074" cy="210" r="16"/><circle class="node output" cx="1074" cy="244" r="16"/>
+    </g>
+
+    <g transform="translate(890 408)">
+      <path class="fixed w1" d="M0 0h38"/><path class="fixed w2" d="M52 0h38"/><path class="fixed w3" d="M104 0h38"/>
+      <text class="phase-sub" x="154" y="4">connection strength</text>
+    </g>
+  </g>
 </svg>
