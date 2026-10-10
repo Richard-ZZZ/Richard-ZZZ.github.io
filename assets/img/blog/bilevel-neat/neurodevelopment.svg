@@ -1,114 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
-  <title id="title">Topology exploration in early life followed by weight refinement in adulthood</title>
-  <desc id="desc">One neuron becomes two, then four, before a larger population forms connections and some neurons disappear. In adulthood, the topology remains fixed while connection weights continue to update.</desc>
-  <defs>
-    <symbol id="neuron" viewBox="-12 -20 24 40">
-      <circle cx="0" cy="0" r="6" fill="#eaf4ff" stroke="#367fd8" stroke-width="2.5"/>
-      <circle cx="0" cy="0" r="2.3" fill="#367fd8"/>
-      <path d="M0-7v-8m0 0l-5-4m5 4l5-4M0 7v8m0 0l-5 4m5-4l5 4" fill="none" stroke="#367fd8" stroke-width="2" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="network-node" viewBox="-10 -10 20 20">
-      <circle cx="0" cy="0" r="5.5" fill="#f7fbff" stroke="#367fd8" stroke-width="2.2"/>
-    </symbol>
-  </defs>
+  <title id="title">Layered topology development and adult weight refinement</title>
+  <desc id="desc">One node becomes two and then four. A layered neural network forms as some nodes fade away and surviving nodes connect. In adulthood the layered topology stays fixed while connection weights update.</desc>
   <style>
     text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .panel { fill:#f7faff; fill-opacity:.7; stroke:#d4dde9; stroke-width:1.2; }
-    .phase-title { fill:#253447; font-size:21px; font-weight:750; }
-    .period { fill:#347ff0; font-size:13px; font-weight:650; letter-spacing:.045em; }
-    .explain { fill:#687587; font-size:13px; }
-    .step { fill:#506176; font-size:12.5px; font-weight:650; }
-    .phase-one { animation:phaseOne 16s ease-in-out infinite; }
-    .phase-two { animation:phaseTwo 16s ease-in-out infinite; }
-    .one { animation:one 16s ease-in-out infinite; }
-    .two { opacity:0; animation:two 16s ease-in-out infinite; }
-    .four { opacity:0; animation:four 16s ease-in-out infinite; }
-    .many { opacity:0; animation:many 16s ease-in-out infinite; }
-    .removed { opacity:0; animation:removed 16s ease-in-out infinite; }
-    .keep-edge { fill:none; stroke:#3982dc; stroke-width:2.8; stroke-linecap:round; stroke-dasharray:1; stroke-dashoffset:1; animation:connect 16s ease-in-out infinite; }
-    .candidate-edge { fill:none; stroke:#e07c79; stroke-width:2; stroke-linecap:round; stroke-dasharray:7 7; animation:candidate 16s ease-in-out infinite; }
-    .fixed { fill:none; stroke-linecap:round; }
-    .w1 { animation:w1 16s ease-in-out infinite; }.w2 { animation:w2 16s ease-in-out infinite; }.w3 { animation:w3 16s ease-in-out infinite; }.w4 { animation:w4 16s ease-in-out infinite; }
-    @keyframes phaseOne { 0%,60%{opacity:1} 67%,100%{opacity:.38} }
-    @keyframes phaseTwo { 0%,60%{opacity:.38} 67%,100%{opacity:1} }
-    @keyframes one { 0%,10%{opacity:1} 14%,100%{opacity:0} }
-    @keyframes two { 0%,11%{opacity:0} 15%,24%{opacity:1} 28%,100%{opacity:0} }
-    @keyframes four { 0%,25%{opacity:0} 29%,40%{opacity:1} 44%,100%{opacity:0} }
-    @keyframes many { 0%,41%{opacity:0} 46%,100%{opacity:1} }
-    @keyframes removed { 0%,42%{opacity:0} 47%,54%{opacity:.75} 61%,100%{opacity:0} }
-    @keyframes connect { 0%,47%{stroke-dashoffset:1;opacity:0} 62%,100%{stroke-dashoffset:0;opacity:.92} }
-    @keyframes candidate { 0%,45%{opacity:0} 49%,56%{opacity:.82} 63%,100%{opacity:0} }
-    @keyframes w1 { 0%,63%{stroke:#9db3c6;stroke-width:2} 70%{stroke:#287b9a;stroke-width:5.8} 81%{stroke:#e0874d;stroke-width:2.4} 93%,100%{stroke:#287b9a;stroke-width:4.6} }
-    @keyframes w2 { 0%,63%{stroke:#9db3c6;stroke-width:2} 72%{stroke:#e0874d;stroke-width:3.2} 83%{stroke:#287b9a;stroke-width:6} 95%,100%{stroke:#7ca8ba;stroke-width:2.4} }
-    @keyframes w3 { 0%,63%{stroke:#9db3c6;stroke-width:2} 74%{stroke:#7ca8ba;stroke-width:1.6} 85%{stroke:#e0874d;stroke-width:5} 97%,100%{stroke:#287b9a;stroke-width:3.4} }
-    @keyframes w4 { 0%,63%{stroke:#9db3c6;stroke-width:2} 76%{stroke:#287b9a;stroke-width:3.6} 87%{stroke:#7ca8ba;stroke-width:1.4} 99%,100%{stroke:#e0874d;stroke-width:5.2} }
+    .panel { fill:#f8fbff; fill-opacity:.72; stroke:#d4dde9; stroke-width:1.2; }
+    .phase-title { fill:#253447; font-size:21px; font-weight:750; }.period { fill:#347ff0; font-size:13px; font-weight:650; letter-spacing:.045em; }.explain { fill:#687587; font-size:13px; }
+    .layer-guide { fill:#dcecff; fill-opacity:.28; }.layer-label { fill:#788697; font-size:11.5px; font-weight:650; letter-spacing:.035em; }
+    .node { fill:#f9fcff; stroke:#397fc4; stroke-width:2.2; }.node-core { fill:#397fc4; }
+    .edge { stroke:#77a6cf; stroke-width:1.7; stroke-opacity:.58; stroke-linecap:round; }
+    .phase-one { animation:phaseOne 16s ease-in-out infinite; }.phase-two { animation:phaseTwo 16s ease-in-out infinite; }
+    .one { animation:one 16s ease-in-out infinite; }.two { opacity:0; animation:two 16s ease-in-out infinite; }.four { opacity:0; animation:four 16s ease-in-out infinite; }
+    .final-network { opacity:0; animation:finalNetwork 16s ease-in-out infinite; }.removed-node { opacity:0; transform-box:fill-box; transform-origin:center; animation:removed 16s ease-in-out infinite; }
+    .candidate-edge { stroke:#dd8078; stroke-width:1.7; stroke-dasharray:6 7; opacity:0; animation:candidate 16s ease-in-out infinite; }
+    .surviving-edge { stroke-dasharray:1; stroke-dashoffset:1; animation:connect 16s ease-in-out infinite; }
+    .timeline { stroke:#c7d1dd; stroke-width:1.5; }.timeline-dot { fill:#d4dde8; }.t1 { animation:t1 16s infinite; }.t2 { animation:t2 16s infinite; }.t4 { animation:t4 16s infinite; }.tn { animation:tn 16s infinite; }
+    .fixed { fill:none; stroke-linecap:round; }.w1 { animation:w1 16s ease-in-out infinite; }.w2 { animation:w2 16s ease-in-out infinite; }.w3 { animation:w3 16s ease-in-out infinite; }.w4 { animation:w4 16s ease-in-out infinite; }
+    @keyframes phaseOne { 0%,60%{opacity:1} 67%,100%{opacity:.4} } @keyframes phaseTwo { 0%,60%{opacity:.4} 67%,100%{opacity:1} }
+    @keyframes one { 0%,10%{opacity:1} 14%,100%{opacity:0} } @keyframes two { 0%,11%{opacity:0} 15%,24%{opacity:1} 28%,100%{opacity:0} } @keyframes four { 0%,25%{opacity:0} 29%,40%{opacity:1} 44%,100%{opacity:0} }
+    @keyframes finalNetwork { 0%,41%{opacity:0} 47%,100%{opacity:1} } @keyframes removed { 0%,42%{opacity:0;transform:scale(1)} 47%,54%{opacity:.78;transform:scale(1)} 61%,100%{opacity:0;transform:scale(.15)} }
+    @keyframes candidate { 0%,45%{opacity:0} 49%,56%{opacity:.75} 63%,100%{opacity:0} } @keyframes connect { 0%,47%{stroke-dashoffset:1;opacity:0} 62%,100%{stroke-dashoffset:0;opacity:.58} }
+    @keyframes t1 { 0%,11%{fill:#347ff0} 15%,100%{fill:#d4dde8} } @keyframes t2 { 0%,12%{fill:#d4dde8} 15%,25%{fill:#347ff0} 29%,100%{fill:#d4dde8} } @keyframes t4 { 0%,26%{fill:#d4dde8} 29%,41%{fill:#347ff0} 45%,100%{fill:#d4dde8} } @keyframes tn { 0%,42%{fill:#d4dde8} 47%,100%{fill:#347ff0} }
+    @keyframes w1 { 0%,63%{stroke:#9db3c6;stroke-width:1.8} 70%{stroke:#287b9a;stroke-width:5.4} 81%{stroke:#e0874d;stroke-width:2.3} 93%,100%{stroke:#287b9a;stroke-width:4.4} }
+    @keyframes w2 { 0%,63%{stroke:#9db3c6;stroke-width:1.8} 72%{stroke:#e0874d;stroke-width:3} 83%{stroke:#287b9a;stroke-width:5.6} 95%,100%{stroke:#7ca8ba;stroke-width:2.2} }
+    @keyframes w3 { 0%,63%{stroke:#9db3c6;stroke-width:1.8} 74%{stroke:#7ca8ba;stroke-width:1.5} 85%{stroke:#e0874d;stroke-width:4.8} 97%,100%{stroke:#287b9a;stroke-width:3.2} }
+    @keyframes w4 { 0%,63%{stroke:#9db3c6;stroke-width:1.8} 76%{stroke:#287b9a;stroke-width:3.4} 87%{stroke:#7ca8ba;stroke-width:1.3} 99%,100%{stroke:#e0874d;stroke-width:4.8} }
     @media (prefers-reduced-motion:reduce) { * { animation-play-state:paused !important; } }
   </style>
 
-  <rect class="panel" x="22" y="20" width="566" height="426" rx="18"/>
-  <rect class="panel" x="612" y="20" width="566" height="426" rx="18"/>
+  <rect class="panel" x="22" y="20" width="566" height="426" rx="18"/><rect class="panel" x="612" y="20" width="566" height="426" rx="18"/>
 
   <g class="phase-one">
-    <text class="phase-title" x="52" y="58">Phase 1: Topology Exploration</text>
-    <text class="period" x="52" y="82">EARLY LIFE TO ADOLESCENCE</text>
-    <text class="explain" x="52" y="105">multiply · select · connect</text>
+    <text class="phase-title" x="52" y="58">Phase 1: Topology Exploration</text><text class="period" x="52" y="82">EARLY LIFE TO ADOLESCENCE</text><text class="explain" x="52" y="105">multiply · select · form a layered network</text>
+    <g class="one"><circle class="node" cx="305" cy="232" r="10"/><circle class="node-core" cx="305" cy="232" r="3"/></g>
+    <g class="two"><circle class="node" cx="305" cy="205" r="9"/><circle class="node-core" cx="305" cy="205" r="2.7"/><circle class="node" cx="305" cy="259" r="9"/><circle class="node-core" cx="305" cy="259" r="2.7"/></g>
+    <g class="four"><circle class="node" cx="280" cy="204" r="8"/><circle class="node-core" cx="280" cy="204" r="2.4"/><circle class="node" cx="330" cy="204" r="8"/><circle class="node-core" cx="330" cy="204" r="2.4"/><circle class="node" cx="280" cy="260" r="8"/><circle class="node-core" cx="280" cy="260" r="2.4"/><circle class="node" cx="330" cy="260" r="8"/><circle class="node-core" cx="330" cy="260" r="2.4"/></g>
 
-    <!-- one -->
-    <g class="one"><use href="#neuron" x="275" y="192" width="38" height="64"/></g>
-
-    <!-- one divides into two -->
-    <g class="two">
-      <use href="#neuron" x="220" y="162" width="34" height="58"/>
-      <use href="#neuron" x="332" y="226" width="34" height="58"/>
-      <path d="M259 216h58m-7-6l8 6-8 6" fill="none" stroke="#aeb8c4" stroke-width="1.5"/>
+    <g class="final-network">
+      <rect class="layer-guide" x="78" y="132" width="44" height="210" rx="22"/><rect class="layer-guide" x="218" y="132" width="44" height="210" rx="22"/><rect class="layer-guide" x="368" y="132" width="44" height="210" rx="22"/><rect class="layer-guide" x="498" y="132" width="44" height="210" rx="22"/>
+      <g class="surviving-edge edge">
+        <line x1="100" y1="170" x2="240" y2="155"/><line x1="100" y1="170" x2="240" y2="205"/><line x1="100" y1="220" x2="240" y2="205"/><line x1="100" y1="220" x2="240" y2="255"/><line x1="100" y1="270" x2="240" y2="255"/><line x1="100" y1="270" x2="240" y2="305"/><line x1="100" y1="320" x2="240" y2="305"/>
+        <line x1="240" y1="155" x2="390" y2="180"/><line x1="240" y1="205" x2="390" y2="180"/><line x1="240" y1="205" x2="390" y2="240"/><line x1="240" y1="255" x2="390" y2="240"/><line x1="240" y1="255" x2="390" y2="300"/><line x1="240" y1="305" x2="390" y2="300"/>
+        <line x1="390" y1="180" x2="520" y2="210"/><line x1="390" y1="240" x2="520" y2="210"/><line x1="390" y1="240" x2="520" y2="270"/><line x1="390" y1="300" x2="520" y2="270"/>
+      </g>
+      <g class="candidate-edge"><line x1="100" y1="170" x2="240" y2="340"/><line x1="100" y1="320" x2="240" y2="340"/><line x1="240" y1="155" x2="390" y2="140"/><line x1="390" y1="140" x2="520" y2="270"/></g>
+      <g fill="#f9fcff" stroke="#397fc4" stroke-width="2"><circle cx="100" cy="170" r="6"/><circle cx="100" cy="220" r="6"/><circle cx="100" cy="270" r="6"/><circle cx="100" cy="320" r="6"/><circle cx="240" cy="155" r="6"/><circle cx="240" cy="205" r="6"/><circle cx="240" cy="255" r="6"/><circle cx="240" cy="305" r="6"/><circle cx="390" cy="180" r="6"/><circle cx="390" cy="240" r="6"/><circle cx="390" cy="300" r="6"/><circle cx="520" cy="210" r="6"/><circle cx="520" cy="270" r="6"/></g>
+      <g class="removed-node" fill="#fff5f2" stroke="#d97b70" stroke-width="2"><circle cx="240" cy="340" r="6"/><circle cx="390" cy="140" r="6"/></g>
+      <text class="layer-label" x="82" y="364">LAYER 1</text><text class="layer-label" x="222" y="364">LAYER 2</text><text class="layer-label" x="372" y="364">LAYER 3</text><text class="layer-label" x="497" y="364">OUTPUT</text>
     </g>
-
-    <!-- two divide into four -->
-    <g class="four">
-      <use href="#neuron" x="158" y="142" width="32" height="54"/><use href="#neuron" x="250" y="212" width="32" height="54"/>
-      <use href="#neuron" x="352" y="142" width="32" height="54"/><use href="#neuron" x="442" y="212" width="32" height="54"/>
-    </g>
-
-    <!-- larger population; two peripheral cells fade away without crosses -->
-    <g class="many">
-      <use href="#neuron" x="92" y="152" width="28" height="48"/><use href="#neuron" x="156" y="270" width="28" height="48"/>
-      <use href="#neuron" x="218" y="132" width="28" height="48"/><use href="#neuron" x="278" y="244" width="28" height="48"/>
-      <use href="#neuron" x="346" y="158" width="28" height="48"/><use href="#neuron" x="416" y="284" width="28" height="48"/>
-      <use href="#neuron" x="484" y="188" width="28" height="48"/>
-    </g>
-    <g class="removed">
-      <use href="#neuron" x="94" y="302" width="26" height="44" opacity=".62"/><use href="#neuron" x="462" y="320" width="26" height="44" opacity=".62"/>
-    </g>
-
-    <path class="keep-edge" pathLength="1" d="M106 176C168 172 192 165 232 156M106 176C169 206 214 247 292 268M170 294C216 288 252 277 292 268M232 156C281 150 319 161 360 182M292 268C339 274 383 294 430 308M360 182C409 181 451 194 498 212M360 182C386 218 409 269 430 308M292 268C363 245 430 225 498 212"/>
-    <path class="candidate-edge" d="M106 176C179 236 248 275 430 308M170 294C222 218 292 185 360 182M232 156C322 223 383 291 430 308M292 268C365 306 430 332 475 342"/>
-
-    <g transform="translate(95 406)">
-      <text class="step" x="0" y="0">1</text><path d="M16-4h35m-6-5l7 5-7 5" fill="none" stroke="#aeb8c4" stroke-width="1.5"/>
-      <text class="step" x="65" y="0">2</text><path d="M81-4h35m-6-5l7 5-7 5" fill="none" stroke="#aeb8c4" stroke-width="1.5"/>
-      <text class="step" x="130" y="0">4</text><path d="M146-4h48m-6-5l7 5-7 5" fill="none" stroke="#aeb8c4" stroke-width="1.5"/>
-      <text class="step" x="208" y="0">select &amp; connect</text>
-    </g>
+    <line class="timeline" x1="110" y1="407" x2="476" y2="407"/><circle class="timeline-dot t1" cx="110" cy="407" r="5"/><circle class="timeline-dot t2" cx="210" cy="407" r="5"/><circle class="timeline-dot t4" cx="310" cy="407" r="5"/><circle class="timeline-dot tn" cx="476" cy="407" r="5"/><text class="layer-label" x="90" y="429">1 CELL</text><text class="layer-label" x="188" y="429">2 CELLS</text><text class="layer-label" x="288" y="429">4 CELLS</text><text class="layer-label" x="423" y="429">NETWORK</text>
   </g>
 
   <g class="phase-two">
-    <text class="phase-title" x="642" y="58">Phase 2: Weight Refinement</text>
-    <text class="period" x="642" y="82">ADULTHOOD</text>
-    <text class="explain" x="642" y="105">topology fixed · weights continue to update</text>
-
-    <path class="fixed w1" d="M704 176C765 172 781 165 820 156M704 176C767 206 804 247 880 268M768 294C814 288 841 277 880 268"/>
-    <path class="fixed w2" d="M832 156C880 150 908 161 948 182M894 268C940 274 972 294 1018 308"/>
-    <path class="fixed w3" d="M960 182C1008 181 1040 194 1086 212M960 182C985 218 998 269 1018 308"/>
-    <path class="fixed w4" d="M894 268C964 245 1019 225 1086 212"/>
-
-    <use href="#network-node" x="690" y="162" width="28" height="28"/><use href="#network-node" x="754" y="280" width="28" height="28"/>
-    <use href="#network-node" x="818" y="142" width="28" height="28"/><use href="#network-node" x="866" y="254" width="28" height="28"/>
-    <use href="#network-node" x="946" y="168" width="28" height="28"/><use href="#network-node" x="1004" y="294" width="28" height="28"/>
-    <use href="#network-node" x="1072" y="198" width="28" height="28"/>
-
-    <g transform="translate(710 406)">
-      <path class="fixed w1" d="M0 0h45"/><path class="fixed w2" d="M60 0h45"/><path class="fixed w3" d="M120 0h45"/>
-      <text class="step" x="184" y="4">connection weights update</text>
+    <text class="phase-title" x="642" y="58">Phase 2: Weight Refinement</text><text class="period" x="642" y="82">ADULTHOOD</text><text class="explain" x="642" y="105">topology fixed · weights continue to update</text>
+    <rect class="layer-guide" x="668" y="132" width="44" height="210" rx="22"/><rect class="layer-guide" x="808" y="132" width="44" height="210" rx="22"/><rect class="layer-guide" x="958" y="132" width="44" height="210" rx="22"/><rect class="layer-guide" x="1088" y="132" width="44" height="210" rx="22"/>
+    <g>
+      <g class="fixed w1"><line x1="690" y1="170" x2="830" y2="155"/><line x1="690" y1="220" x2="830" y2="205"/><line x1="690" y1="270" x2="830" y2="255"/><line x1="690" y1="320" x2="830" y2="305"/></g>
+      <g class="fixed w2"><line x1="690" y1="170" x2="830" y2="205"/><line x1="690" y1="220" x2="830" y2="255"/><line x1="690" y1="270" x2="830" y2="305"/></g>
+      <g class="fixed w3"><line x1="830" y1="155" x2="980" y2="180"/><line x1="830" y1="205" x2="980" y2="180"/><line x1="830" y1="205" x2="980" y2="240"/><line x1="830" y1="255" x2="980" y2="240"/><line x1="830" y1="255" x2="980" y2="300"/><line x1="830" y1="305" x2="980" y2="300"/></g>
+      <g class="fixed w4"><line x1="980" y1="180" x2="1110" y2="210"/><line x1="980" y1="240" x2="1110" y2="210"/><line x1="980" y1="240" x2="1110" y2="270"/><line x1="980" y1="300" x2="1110" y2="270"/></g>
     </g>
+    <g fill="#f9fcff" stroke="#397fc4" stroke-width="2"><circle cx="690" cy="170" r="6"/><circle cx="690" cy="220" r="6"/><circle cx="690" cy="270" r="6"/><circle cx="690" cy="320" r="6"/><circle cx="830" cy="155" r="6"/><circle cx="830" cy="205" r="6"/><circle cx="830" cy="255" r="6"/><circle cx="830" cy="305" r="6"/><circle cx="980" cy="180" r="6"/><circle cx="980" cy="240" r="6"/><circle cx="980" cy="300" r="6"/><circle cx="1110" cy="210" r="6"/><circle cx="1110" cy="270" r="6"/></g>
+    <text class="layer-label" x="672" y="364">LAYER 1</text><text class="layer-label" x="812" y="364">LAYER 2</text><text class="layer-label" x="962" y="364">LAYER 3</text><text class="layer-label" x="1087" y="364">OUTPUT</text>
+    <g transform="translate(770 410)"><path class="fixed w1" d="M0 0h44"/><path class="fixed w2" d="M59 0h44"/><path class="fixed w3" d="M118 0h44"/><text class="layer-label" x="181" y="4">CONNECTION WEIGHTS UPDATE</text></g>
   </g>
 </svg>

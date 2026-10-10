@@ -15,7 +15,7 @@ permalink: /blog/bilevel-neat/
   </header>
 
 <figure class="blog-figure blog-hero-animation">
-  <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}?v=20261009-4" alt="Animated neural-network development from cell multiplication and topology exploration to adult weight refinement">
+  <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}?v=20261009-5" alt="Animated layered neural-network development from cell multiplication to adult weight refinement">
   <figcaption>The two-phase strategy from the report: from early life to adolescence, neurons multiply, some are removed, and the survivors form a network; in adulthood, the topology remains fixed while connection weights continue to adapt.</figcaption>
 </figure>
 

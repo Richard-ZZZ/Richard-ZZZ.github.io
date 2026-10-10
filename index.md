@@ -55,7 +55,7 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
 
   <article class="research-card">
     <a class="research-figure" href="{{ '/blog/bilevel-neat/' | relative_url }}" aria-label="Read How Intelligence Emerges: From Structural Growth to Synaptic Refinement">
-      <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}?v=20261009-4" alt="Animated neural-network development from cell multiplication and topology exploration to adult weight refinement">
+      <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}?v=20261009-5" alt="Animated layered neural-network development from cell multiplication to adult weight refinement">
     </a>
     <div class="research-copy">
       <span class="research-eyebrow">Science of AI · Neurodevelopment</span>
