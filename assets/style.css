@@ -251,7 +251,7 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   height: auto;
   padding: 0;
   overflow: hidden;
-  background: #fffefb;
+  background: transparent;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -267,12 +267,12 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   width: min(100%, 760px);
 }
 
-.research-card:nth-child(3) .research-figure img {
-  width: 100%;
+.research-card:nth-child(-n + 2) .research-figure img {
+  mix-blend-mode: multiply;
 }
 
-.research-card:nth-child(3) .research-figure {
-  background: transparent;
+.research-card:nth-child(3) .research-figure img {
+  width: 100%;
 }
 
 .research-copy {
