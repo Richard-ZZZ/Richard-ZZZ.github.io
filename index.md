@@ -42,7 +42,7 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
 
   <article class="research-card">
     <a class="research-figure" href="https://arxiv.org/abs/2606.31813" aria-label="Read Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR">
-      <img src="{{ '/assets/img/research/lora-initialization-web.png' | relative_url }}?v=20261009-3" alt="Comparison of LoRA, PiSSA, MiLoRA, LoRA-RLPO, and LoRA-RLMO initialization strategies">
+      <img src="{{ '/assets/img/research/lora-initialization-web.png' | relative_url }}?v=20261009-4" alt="Comparison of LoRA, PiSSA, MiLoRA, LoRA-RLPO, and LoRA-RLMO initialization strategies">
     </a>
     <div class="research-copy">
       <span class="research-eyebrow">LLM alignment · ICML 2026</span>
