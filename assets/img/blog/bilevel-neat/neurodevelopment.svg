@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 420" role="img" aria-labelledby="title desc">
   <title id="title">Topology exploration and adult weight refinement</title>
   <desc id="desc">An early-development analogy progresses from one cell to two, four, and a larger unstructured population. Candidate nodes and connections are pruned before the surviving feed-forward graph is arranged by topological order. In adulthood the graph stays fixed while its connection weights update.</desc>
   <style>
     text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .panel { fill:#f8fbff; fill-opacity:.72; stroke:#d4dde9; stroke-width:1.2; }.phase-title { fill:#253447; font-size:21px; font-weight:750; }.period { fill:#347ff0; font-size:13px; font-weight:650; letter-spacing:.045em; }.explain { fill:#687587; font-size:13px; }
-    .node { fill:#f9fcff; stroke:#397fc4; stroke-width:2.1; }.edge { stroke:#77a6cf; stroke-width:1.7; stroke-opacity:.62; stroke-linecap:round; }
+    .phase-title { fill:#2f3d43; font-size:21px; font-weight:750; }.period { font-size:13px; font-weight:650; letter-spacing:.045em; }.early { fill:#a55a33; }.adult { fill:#39727a; }.explain { fill:#68736f; font-size:13px; }
+    .node { fill:#fffaf1; fill-opacity:.8; stroke:#5f7f8c; stroke-width:2.1; }.edge { stroke:#78909a; stroke-width:1.7; stroke-opacity:.6; stroke-linecap:round; }
     .phase-one { animation:phaseOne 18s ease-in-out infinite; }.phase-two { animation:phaseTwo 18s ease-in-out infinite; }
     .one { animation:one 18s ease-in-out infinite; }.two { opacity:0; animation:two 18s ease-in-out infinite; }.four { opacity:0; animation:four 18s ease-in-out infinite; }.population { opacity:0; animation:population 18s ease-in-out infinite; }
     .final-graph { opacity:0; animation:finalGraph 18s ease-in-out infinite; }.removed-node { opacity:0; transform-box:fill-box; transform-origin:center; animation:removed 18s ease-in-out infinite; }
-    .candidate-edge { stroke:#dd8078; stroke-width:1.8; stroke-dasharray:6 7; opacity:0; animation:candidate 18s ease-in-out infinite; }.surviving-edge { stroke-dasharray:1; stroke-dashoffset:1; animation:connect 18s ease-in-out infinite; }
+    .candidate-edge { stroke:#bd7561; stroke-width:1.8; stroke-dasharray:6 7; opacity:0; animation:candidate 18s ease-in-out infinite; }.surviving-edge { stroke-dasharray:1; stroke-dashoffset:1; animation:connect 18s ease-in-out infinite; }
     .fixed { fill:none; stroke-linecap:round; }.w1 { animation:w1 18s ease-in-out infinite; }.w2 { animation:w2 18s ease-in-out infinite; }.w3 { animation:w3 18s ease-in-out infinite; }.w4 { animation:w4 18s ease-in-out infinite; }
     .legend { fill:#788697; font-size:11.5px; font-weight:650; letter-spacing:.035em; }
     @keyframes phaseOne { 0%,66%{opacity:1} 72%,100%{opacity:.4} } @keyframes phaseTwo { 0%,66%{opacity:.4} 72%,100%{opacity:1} }
@@ -16,21 +16,21 @@
     @keyframes population { 0%,40%{opacity:0} 44%,52%{opacity:1} 57%,100%{opacity:0} } @keyframes finalGraph { 0%,51%{opacity:0} 56%,100%{opacity:1} }
     @keyframes removed { 0%,49%{opacity:0;transform:scale(1)} 54%,61%{opacity:.9;transform:scale(1)} 68%,100%{opacity:0;transform:scale(.12)} }
     @keyframes candidate { 0%,49%{opacity:0} 54%,61%{opacity:.82} 68%,100%{opacity:0} } @keyframes connect { 0%,52%{stroke-dashoffset:1;opacity:0} 67%,100%{stroke-dashoffset:0;opacity:.62} }
-    @keyframes w1 { 0%,68%{stroke:#9db3c6;stroke-width:1.7} 75%{stroke:#287b9a;stroke-width:5.2} 84%{stroke:#e0874d;stroke-width:2.2} 94%,100%{stroke:#287b9a;stroke-width:4.2} }
-    @keyframes w2 { 0%,68%{stroke:#9db3c6;stroke-width:1.7} 77%{stroke:#e0874d;stroke-width:3} 86%{stroke:#287b9a;stroke-width:5.4} 96%,100%{stroke:#7ca8ba;stroke-width:2.1} }
-    @keyframes w3 { 0%,68%{stroke:#9db3c6;stroke-width:1.7} 79%{stroke:#7ca8ba;stroke-width:1.4} 88%{stroke:#e0874d;stroke-width:4.6} 98%,100%{stroke:#287b9a;stroke-width:3.1} }
-    @keyframes w4 { 0%,68%{stroke:#9db3c6;stroke-width:1.7} 81%{stroke:#287b9a;stroke-width:3.3} 90%{stroke:#7ca8ba;stroke-width:1.3} 99%,100%{stroke:#e0874d;stroke-width:4.6} }
+    @keyframes w1 { 0%,68%{stroke:#9aa9a8;stroke-width:1.7} 75%{stroke:#39727a;stroke-width:5.2} 84%{stroke:#ad6038;stroke-width:2.2} 94%,100%{stroke:#39727a;stroke-width:4.2} }
+    @keyframes w2 { 0%,68%{stroke:#9aa9a8;stroke-width:1.7} 77%{stroke:#ad6038;stroke-width:3} 86%{stroke:#39727a;stroke-width:5.4} 96%,100%{stroke:#718f91;stroke-width:2.1} }
+    @keyframes w3 { 0%,68%{stroke:#9aa9a8;stroke-width:1.7} 79%{stroke:#718f91;stroke-width:1.4} 88%{stroke:#ad6038;stroke-width:4.6} 98%,100%{stroke:#39727a;stroke-width:3.1} }
+    @keyframes w4 { 0%,68%{stroke:#9aa9a8;stroke-width:1.7} 81%{stroke:#39727a;stroke-width:3.3} 90%{stroke:#718f91;stroke-width:1.3} 99%,100%{stroke:#ad6038;stroke-width:4.6} }
     @media (prefers-reduced-motion:reduce) { * { animation-play-state:paused !important; } }
   </style>
 
-  <rect class="panel" x="22" y="20" width="566" height="406" rx="18"/><rect class="panel" x="612" y="20" width="566" height="406" rx="18"/>
+  <line x1="600" y1="26" x2="600" y2="394" stroke="#9b8e7b" stroke-opacity=".3" stroke-width="1"/>
 
   <g class="phase-one">
-    <text class="phase-title" x="52" y="58">Phase 1: Topology Exploration</text><text class="period" x="52" y="82">EARLY LIFE TO ADOLESCENCE</text><text class="explain" x="52" y="105">growth · connection formation · pruning</text>
+    <text class="phase-title" x="32" y="52">Phase 1: Topology Exploration</text><text class="period early" x="32" y="76">EARLY LIFE TO ADOLESCENCE</text><text class="explain" x="32" y="99">growth · connection formation · pruning</text>
     <g class="one"><circle class="node" cx="305" cy="245" r="9"/></g>
     <g class="two"><circle class="node" cx="277" cy="245" r="8"/><circle class="node" cx="333" cy="245" r="8"/></g>
     <g class="four"><circle class="node" cx="305" cy="202" r="7"/><circle class="node" cx="262" cy="245" r="7"/><circle class="node" cx="348" cy="245" r="7"/><circle class="node" cx="305" cy="288" r="7"/></g>
-    <g class="population" fill="#f9fcff" stroke="#397fc4" stroke-width="2">
+    <g class="population" fill="#fffaf1" fill-opacity=".8" stroke="#5f7f8c" stroke-width="2">
       <circle cx="118" cy="185" r="6"/><circle cx="185" cy="300" r="6"/><circle cx="220" cy="155" r="6"/><circle cx="275" cy="245" r="6"/><circle cx="340" cy="170" r="6"/><circle cx="375" cy="305" r="6"/><circle cx="455" cy="205" r="6"/><circle cx="500" cy="290" r="6"/><circle cx="135" cy="335" r="6"/><circle cx="285" cy="340" r="6"/><circle cx="425" cy="145" r="6"/><circle cx="515" cy="155" r="6"/>
     </g>
 
@@ -43,20 +43,20 @@
       <g class="candidate-edge">
         <line x1="88" y1="165" x2="210" y2="145"/><line x1="88" y1="285" x2="210" y2="145"/><line x1="88" y1="345" x2="330" y2="355"/><line x1="220" y1="185" x2="330" y2="355"/><line x1="235" y1="260" x2="455" y2="145"/><line x1="210" y1="145" x2="455" y2="145"/><line x1="330" y1="355" x2="475" y2="295"/><line x1="455" y1="145" x2="540" y2="250"/>
       </g>
-      <g fill="#f9fcff" stroke="#397fc4" stroke-width="2"><circle cx="88" cy="165" r="5.5"/><circle cx="88" cy="225" r="5.5"/><circle cx="88" cy="285" r="5.5"/><circle cx="88" cy="345" r="5.5"/><circle cx="220" cy="185" r="5.5"/><circle cx="235" cy="260" r="5.5"/><circle cx="215" cy="325" r="5.5"/><circle cx="350" cy="155" r="5.5"/><circle cx="375" cy="230" r="5.5"/><circle cx="355" cy="315" r="5.5"/><circle cx="470" cy="205" r="5.5"/><circle cx="475" cy="295" r="5.5"/><circle cx="540" cy="250" r="5.5"/></g>
-      <g class="removed-node" fill="#fff5f2" stroke="#d97b70" stroke-width="2"><circle cx="210" cy="145" r="5.5"/><circle cx="330" cy="355" r="5.5"/><circle cx="455" cy="145" r="5.5"/></g>
+      <g fill="#fffaf1" fill-opacity=".8" stroke="#5f7f8c" stroke-width="2"><circle cx="88" cy="165" r="5.5"/><circle cx="88" cy="225" r="5.5"/><circle cx="88" cy="285" r="5.5"/><circle cx="88" cy="345" r="5.5"/><circle cx="220" cy="185" r="5.5"/><circle cx="235" cy="260" r="5.5"/><circle cx="215" cy="325" r="5.5"/><circle cx="350" cy="155" r="5.5"/><circle cx="375" cy="230" r="5.5"/><circle cx="355" cy="315" r="5.5"/><circle cx="470" cy="205" r="5.5"/><circle cx="475" cy="295" r="5.5"/><circle cx="540" cy="250" r="5.5"/></g>
+      <g class="removed-node" fill="#fff5ef" stroke="#bd7561" stroke-width="2"><circle cx="210" cy="145" r="5.5"/><circle cx="330" cy="355" r="5.5"/><circle cx="455" cy="145" r="5.5"/></g>
     </g>
   </g>
 
   <g class="phase-two">
-    <text class="phase-title" x="642" y="58">Phase 2: Weight Refinement</text><text class="period" x="642" y="82">ADULTHOOD</text><text class="explain" x="642" y="105">fixed topology · connection weights update</text>
+    <text class="phase-title" x="622" y="52">Phase 2: Weight Refinement</text><text class="period adult" x="622" y="76">ADULTHOOD</text><text class="explain" x="622" y="99">fixed topology · connection weights update</text>
     <g>
       <g class="fixed w1"><line x1="678" y1="165" x2="810" y2="185"/><line x1="678" y1="225" x2="810" y2="185"/><line x1="678" y1="225" x2="825" y2="260"/><line x1="678" y1="285" x2="825" y2="260"/></g>
       <g class="fixed w2"><line x1="678" y1="345" x2="805" y2="325"/><line x1="810" y1="185" x2="940" y2="155"/><line x1="810" y1="185" x2="965" y2="230"/><line x1="825" y1="260" x2="965" y2="230"/></g>
       <g class="fixed w3"><line x1="825" y1="260" x2="945" y2="315"/><line x1="805" y1="325" x2="945" y2="315"/><line x1="940" y1="155" x2="1060" y2="205"/><line x1="965" y1="230" x2="1060" y2="205"/></g>
       <g class="fixed w4"><line x1="965" y1="230" x2="1065" y2="295"/><line x1="945" y1="315" x2="1065" y2="295"/><line x1="1060" y1="205" x2="1130" y2="250"/><line x1="1065" y1="295" x2="1130" y2="250"/></g>
     </g>
-    <g fill="#f9fcff" stroke="#397fc4" stroke-width="2"><circle cx="678" cy="165" r="5.5"/><circle cx="678" cy="225" r="5.5"/><circle cx="678" cy="285" r="5.5"/><circle cx="678" cy="345" r="5.5"/><circle cx="810" cy="185" r="5.5"/><circle cx="825" cy="260" r="5.5"/><circle cx="805" cy="325" r="5.5"/><circle cx="940" cy="155" r="5.5"/><circle cx="965" cy="230" r="5.5"/><circle cx="945" cy="315" r="5.5"/><circle cx="1060" cy="205" r="5.5"/><circle cx="1065" cy="295" r="5.5"/><circle cx="1130" cy="250" r="5.5"/></g>
-    <g transform="translate(790 390)"><path class="fixed w1" d="M0 0h44"/><path class="fixed w2" d="M59 0h44"/><path class="fixed w3" d="M118 0h44"/><text class="legend" x="181" y="4">CONNECTION WEIGHTS UPDATE</text></g>
+    <g fill="#fffaf1" fill-opacity=".8" stroke="#5f7f8c" stroke-width="2"><circle cx="678" cy="165" r="5.5"/><circle cx="678" cy="225" r="5.5"/><circle cx="678" cy="285" r="5.5"/><circle cx="678" cy="345" r="5.5"/><circle cx="810" cy="185" r="5.5"/><circle cx="825" cy="260" r="5.5"/><circle cx="805" cy="325" r="5.5"/><circle cx="940" cy="155" r="5.5"/><circle cx="965" cy="230" r="5.5"/><circle cx="945" cy="315" r="5.5"/><circle cx="1060" cy="205" r="5.5"/><circle cx="1065" cy="295" r="5.5"/><circle cx="1130" cy="250" r="5.5"/></g>
+    <g transform="translate(790 390)"><path class="fixed w1" d="M0 0h44"/><path class="fixed w2" d="M59 0h44"/><path class="fixed w3" d="M118 0h44"/><text class="legend" x="181" y="4">WEIGHT UPDATE</text></g>
   </g>
 </svg>

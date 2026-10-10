@@ -15,7 +15,7 @@ permalink: /blog/bilevel-neat/
   </header>
 
 <figure class="blog-figure blog-hero-animation">
-  <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}?v=20261009-6" alt="Animated topology exploration from cell growth and pruning to adult weight refinement">
+  <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}?v=20261009-7" alt="Animated topology exploration from cell growth and pruning to adult weight refinement">
   <figcaption>The early multiplication sequence is a developmental analogy, not a literal layer-building operation. The algorithm maintains a sparse feed-forward graph: nodes and connections are added and pruned, then arranged here only for topological readability. In adulthood, the graph stays fixed while its connection weights continue to adapt.</figcaption>
 </figure>
 
