@@ -29,7 +29,7 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
 <div class="research-showcase">
   <article class="research-card">
     <a class="research-figure" href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}" aria-label="Read Width and Depth Limits Commute during Training in Linear Residual Networks">
-      <img src="{{ '/assets/img/research/width-depth-commutativity-web.svg' | relative_url }}?v=20261009-1" alt="Three width and depth scaling regimes converging to the same trained network output">
+      <img src="{{ '/assets/img/research/width-depth-commutativity-web.png' | relative_url }}?v=20261009-2" alt="Three width and depth scaling regimes converging to the same trained network output">
     </a>
     <div class="research-copy">
       <span class="research-eyebrow">Neural network scaling · Preprint</span>
@@ -42,7 +42,7 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
 
   <article class="research-card">
     <a class="research-figure" href="https://arxiv.org/abs/2606.31813" aria-label="Read Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR">
-      <img src="{{ '/assets/img/research/lora-initialization-web.svg' | relative_url }}?v=20261009-1" alt="Comparison of LoRA, PiSSA, MiLoRA, LoRA-RLPO, and LoRA-RLMO initialization strategies">
+      <img src="{{ '/assets/img/research/lora-initialization-web.png' | relative_url }}?v=20261009-2" alt="Comparison of LoRA, PiSSA, MiLoRA, LoRA-RLPO, and LoRA-RLMO initialization strategies">
     </a>
     <div class="research-copy">
       <span class="research-eyebrow">LLM alignment · ICML 2026</span>
