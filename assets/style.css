@@ -266,6 +266,10 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   width: min(100%, 760px);
 }
 
+.research-card:nth-child(2) .research-figure {
+  padding-left: 18px;
+}
+
 .research-card:nth-child(3) .research-figure img {
   width: 100%;
 }
