@@ -54,13 +54,13 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
   </article>
 
   <article class="research-card">
-    <a class="research-figure" href="{{ '/blog/bilevel-neat/' | relative_url }}" aria-label="Read Learning to Grow: A Developmental Paradigm for Neural Networks">
+    <a class="research-figure" href="{{ '/blog/bilevel-neat/' | relative_url }}" aria-label="Read Intelligence Without a Blueprint">
       <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}?v=20261009-7" alt="Animated topology exploration from cell growth and pruning to adult weight refinement">
     </a>
     <div class="research-copy">
       <span class="research-eyebrow">Science of AI · Developmental Learning</span>
-      <h3><a href="{{ '/blog/bilevel-neat/' | relative_url }}">Learning to Grow: A Developmental Paradigm for Neural Networks</a></h3>
-      <p>Why useful neural structures may need to emerge through developmental stepping stones rather than be designed in advance.</p>
+      <h3><a href="{{ '/blog/bilevel-neat/' | relative_url }}">Intelligence Without a Blueprint</a></h3>
+      <p>What if neural networks could develop their own architectures? Exploring a learning regime where neural structure emerges through evolution and weights are refined through optimization.</p>
       <p class="research-authors"><strong>Ruijia Zhang</strong></p>
       <a class="paper-link" href="{{ '/blog/bilevel-neat/' | relative_url }}">read the blog <span aria-hidden="true">↗</span></a>
     </div>

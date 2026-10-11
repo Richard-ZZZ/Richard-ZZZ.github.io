@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Learning to Grow — Ruijia Zhang"
+title: "Intelligence Without a Blueprint — Ruijia Zhang"
 permalink: /blog/bilevel-neat/
 ---
 
@@ -9,8 +9,8 @@ permalink: /blog/bilevel-neat/
 
   <header class="blog-header">
     <p class="blog-kicker">Science of AI · Developmental Learning</p>
-    <h1>Learning to Grow: A Developmental Paradigm for Neural Networks</h1>
-    <p class="blog-deck">Most neural networks are born fully formed. What if useful computational structure must instead emerge through stepping stones that no designer could specify in advance?</p>
+    <h1>Intelligence Without a Blueprint</h1>
+    <p class="blog-deck">What if neural networks could develop their own architectures? Exploring a learning regime where neural structure emerges through evolution and weights are refined through optimization.</p>
     <p class="blog-meta">Ruijia Zhang · 2026</p>
   </header>
 
