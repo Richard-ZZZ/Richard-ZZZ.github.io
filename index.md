@@ -60,7 +60,7 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
     <div class="research-copy">
       <span class="research-eyebrow">Science of AI · Developmental Learning</span>
       <h3><a href="{{ '/blog/bilevel-neat/' | relative_url }}">Learning to Grow: A Developmental Paradigm for Neural Networks</a></h3>
-      <p>An exploration of learning systems in which neural structure and connection weights develop together.</p>
+      <p>Why useful neural structures may need to emerge through developmental stepping stones rather than be designed in advance.</p>
       <p class="research-authors"><strong>Ruijia Zhang</strong></p>
       <a class="paper-link" href="{{ '/blog/bilevel-neat/' | relative_url }}">read the blog <span aria-hidden="true">↗</span></a>
     </div>
