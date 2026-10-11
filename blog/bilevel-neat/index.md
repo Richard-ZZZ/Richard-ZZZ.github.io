@@ -49,12 +49,22 @@ The learning cycle begins with a population of neural graphs. Within each genera
 
 Let <i>𝒯</i> denote a network topology, <i>w</i> its weights and biases, <i>f</i> the objective used to optimize parameters, and <i>F</i> the fitness used to compare topologies. The idealized bilevel problem is:
 
-<div class="math-block" role="math" aria-label="Bilevel optimization formulation">
-  <div><span class="math-label">Inner level</span> <i>w</i><sup>∗</sup>(𝒯) ∈ arg max<sub><i>w</i></sub> <i>f</i>(𝒯, <i>w</i>)</div>
-  <div><span class="math-label">Upper level</span> 𝒯<sup>∗</sup> ∈ arg max<sub>𝒯</sub> <i>F</i>(𝒯, <i>w</i><sup>∗</sup>(𝒯))</div>
+<div class="math-block" role="math" aria-label="Standard bilevel optimization formulation">
+  <div><span class="math-label">Upper level</span> max<sub>𝒯 ∈ Ω</sub> <i>F</i>(𝒯, <i>w</i><sup>∗</sup>(𝒯))</div>
+  <div><span class="math-label">Lower level</span> <span class="math-constraint">subject to</span> <i>w</i><sup>∗</sup>(𝒯) ∈ arg max<sub><i>w</i> ∈ 𝒲(𝒯)</sub> <i>f</i>(𝒯, <i>w</i>)</div>
 </div>
 
-The inner problem asks what a fixed structure can do after its parameters adapt. The upper problem compares structures using that adapted performance. The implementation cannot solve the inner problem exactly. With a finite optimization budget <i>B</i><sub><i>g</i></sub> in generation <i>g</i>, it computes an approximation:
+The lower-level problem asks what a fixed structure can do after its parameters adapt. The upper-level problem then compares topologies using that adapted performance.
+
+For smooth stochastic bilevel problems with continuous variables, a standard approach is two-timescale stochastic approximation (TTSA): the lower variable follows a faster stochastic update, while the upper variable evolves on a slower timescale so that it sees the lower level close to equilibrium ([Hong et al., 2023](https://epubs.siam.org/doi/10.1137/20M1387341)). Schematically,
+
+<div class="math-block compact" role="math" aria-label="Two-timescale stochastic approximation">
+  <div><span class="math-label">Lower, fast</span> <i>w</i><sub><i>k</i>+1</sub> = <i>w</i><sub><i>k</i></sub> + β<sub><i>k</i></sub> ĥ<sub>lower</sub>(𝒯<sub><i>k</i></sub>, <i>w</i><sub><i>k</i></sub>)</div>
+  <div><span class="math-label">Upper, slow</span> 𝒯<sub><i>k</i>+1</sub> = Π<sub>Ω</sub>[𝒯<sub><i>k</i></sub> + α<sub><i>k</i></sub> ĥ<sub>upper</sub>(𝒯<sub><i>k</i></sub>, <i>w</i><sub><i>k</i></sub>)]</div>
+  <div><span class="math-label">Timescales</span> α<sub><i>k</i></sub> / β<sub><i>k</i></sub> → 0</div>
+</div>
+
+The topology variable in this experiment is discrete, so the implementation does not apply gradient-based TTSA directly. NEAT performs upper-level selection and structural variation, while CMA-ES or Adam approximately solves the lower level. With a finite optimization budget <i>B</i><sub><i>g</i></sub> in generation <i>g</i>, it computes:
 
 <div class="math-block compact" role="math" aria-label="Finite per-generation approximation">
   <div>ŵ<sub><i>i</i></sub><sup>(<i>g</i>)</sup> = 𝒜<sub><i>B</i><sub><i>g</i></sub></sub>(𝒯<sub><i>i</i></sub><sup>(<i>g</i>)</sup>, ŵ<sub><i>i</i></sub><sup>(<i>g</i>−1)</sup>)</div>
@@ -149,5 +159,6 @@ A fixed network learns within a space chosen by its designer. A developmental ne
 <ol class="reference-list">
   <li>Stanley, K. O., & Lehman, J. (2015). <a href="https://link.springer.com/book/10.1007/978-3-319-15524-1"><em>Why Greatness Cannot Be Planned: The Myth of the Objective</em></a>. Springer.</li>
   <li>Stanley, K. O., & Miikkulainen, R. (2002). <a href="https://direct.mit.edu/evco/article/10/2/99/1123/Evolving-Neural-Networks-through-Augmenting">Evolving neural networks through augmenting topologies</a>. <em>Evolutionary Computation</em>, 10(2), 99–127.</li>
+  <li>Hong, M., Wai, H.-T., Wang, Z., & Yang, Z. (2023). <a href="https://epubs.siam.org/doi/10.1137/20M1387341">A two-timescale stochastic algorithm framework for bilevel optimization: Complexity analysis and application to actor-critic</a>. <em>SIAM Journal on Optimization</em>, 33(1), 147–180.</li>
 </ol>
 </article>

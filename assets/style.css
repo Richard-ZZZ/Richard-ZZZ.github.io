@@ -461,6 +461,13 @@ hr { border: none; height: 1px; background: var(--rule); margin: 28px 0; }
   text-transform: uppercase;
 }
 
+.math-constraint {
+  margin-right: 8px;
+  color: var(--muted);
+  font-size: 0.8em;
+  font-style: italic;
+}
+
 .process-line {
   display: flex;
   align-items: center;
