@@ -54,13 +54,13 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
   </article>
 
   <article class="research-card">
-    <a class="research-figure" href="{{ '/blog/bilevel-neat/' | relative_url }}" aria-label="Read How Intelligence Emerges: From Structural Growth to Synaptic Refinement">
+    <a class="research-figure" href="{{ '/blog/bilevel-neat/' | relative_url }}" aria-label="Read Learning to Grow: A Developmental Paradigm for Neural Networks">
       <img src="{{ '/assets/img/blog/bilevel-neat/neurodevelopment.svg' | relative_url }}?v=20261009-7" alt="Animated topology exploration from cell growth and pruning to adult weight refinement">
     </a>
     <div class="research-copy">
-      <span class="research-eyebrow">Science of AI · Neurodevelopment</span>
-      <h3><a href="{{ '/blog/bilevel-neat/' | relative_url }}">How Intelligence Emerges: From Structural Growth to Synaptic Refinement</a></h3>
-      <p>A computational study of emergence across two timescales: structural growth and pruning, followed by synaptic weight refinement.</p>
+      <span class="research-eyebrow">Science of AI · Developmental Learning</span>
+      <h3><a href="{{ '/blog/bilevel-neat/' | relative_url }}">Learning to Grow: A Developmental Paradigm for Neural Networks</a></h3>
+      <p>An exploration of learning systems in which neural structure and connection weights develop together.</p>
       <p class="research-authors"><strong>Ruijia Zhang</strong></p>
       <a class="paper-link" href="{{ '/blog/bilevel-neat/' | relative_url }}">read the blog <span aria-hidden="true">↗</span></a>
     </div>
