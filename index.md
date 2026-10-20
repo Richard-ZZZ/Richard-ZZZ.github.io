@@ -97,7 +97,7 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
   </li>
   <li>
     <span class="pub-year">2026</span>
-    <span class="pub-entry"><a href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a><span class="pub-venue">Major Revision at <em>Journal of the American Statistical Association</em></span><span class="pub-award">🏆 ASA Nonparametric Statistics Section Best Student Paper Award, JSM 2026</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</span></span>
+    <span class="pub-entry"><a href="https://arxiv.org/abs/2506.20406">POLAR: A Pessimistic Model-based Policy Learning Algorithm for Dynamic Treatment Regimes</a><span class="pub-venue">Accepted for publication in the <em>Journal of the American Statistical Association</em></span><span class="pub-award">🏆 ASA Nonparametric Statistics Section Best Student Paper Award, JSM 2026</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Zhenglin Qi, Yue Wu, Xiangyu Zhang, Yanxun Xu</span></span>
   </li>
   <li>
     <span class="pub-year">2026</span>
