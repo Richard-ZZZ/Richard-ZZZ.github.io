@@ -59,7 +59,7 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
 ## Journal Publication
 
 <article class="journal-card">
-  <h3><a href="https://arxiv.org/abs/2506.20406">Pessimistic Model-Based Offline Reinforcement Learning for Multi-Stage Decision-Making</a></h3>
+  <h3><a href="https://arxiv.org/abs/2506.20406">Pessimistic Offline RL for Multi-Stage Decision-Making</a></h3>
   <span class="journal-venue">Accepted at the <em>Journal of the American Statistical Association</em></span>
   <span class="journal-award">🏆 ASA Nonparametric Statistics Section Best Student Paper Award</span>
   <a class="paper-link" href="https://arxiv.org/abs/2506.20406">paper <span aria-hidden="true">↗</span></a>
