@@ -47,6 +47,7 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
     <div class="research-copy">
       <span class="research-eyebrow">LLM alignment · ICML 2026</span>
       <h3><a href="https://arxiv.org/abs/2606.31813">Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR</a></h3>
+      <p class="research-collaboration">Joint work with researchers at <strong>Meta Superintelligence Labs</strong> and <strong>xAI</strong></p>
       <p>Explains why SVD-initialized LoRA variants can become unstable in RLVR and introduces orthonormal initializations that preserve pretrained geometry.</p>
       <p class="research-authors"><strong>Ruijia Zhang</strong>, Jiacheng Zhu, Hanqing Zhu, Laixi Shi</p>
       <a class="paper-link" href="https://arxiv.org/abs/2606.31813">paper <span aria-hidden="true">↗</span></a>
@@ -54,6 +55,15 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
   </article>
 
 </div>
+
+## Journal Publication
+
+<article class="journal-card">
+  <h3><a href="https://arxiv.org/abs/2506.20406">Pessimistic Model-Based Offline Reinforcement Learning for Multi-Stage Decision-Making</a></h3>
+  <span class="journal-venue">Accepted at the <em>Journal of the American Statistical Association</em></span>
+  <span class="journal-award">🏆 ASA Nonparametric Statistics Section Best Student Paper Award</span>
+  <a class="paper-link" href="https://arxiv.org/abs/2506.20406">paper <span aria-hidden="true">↗</span></a>
+</article>
 
 ## Technical Reports on Scalable LLM Systems
 
