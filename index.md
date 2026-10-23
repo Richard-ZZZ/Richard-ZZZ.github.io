@@ -28,15 +28,15 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
 
 <div class="research-showcase">
   <article class="research-card">
-    <a class="research-figure" href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}" aria-label="Read Width and Depth Limits Commute during Training in Linear Residual Networks">
+    <a class="research-figure" href="https://arxiv.org/abs/2610.30729" aria-label="Read Width and Depth Limits Commute during Training in Linear Residual Networks">
       <img src="{{ '/assets/img/research/width-depth-commutativity-web.png' | relative_url }}?v=20261009-2" alt="Three width and depth scaling regimes converging to the same trained network output">
     </a>
     <div class="research-copy">
-      <span class="research-eyebrow">Neural network scaling · Preprint</span>
-      <h3><a href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">Width and Depth Limits Commute during Training in Linear Residual Networks</a></h3>
+      <span class="research-eyebrow">Neural network scaling · arXiv preprint</span>
+      <h3><a href="https://arxiv.org/abs/2610.30729">Width and Depth Limits Commute during Training in Linear Residual Networks</a></h3>
       <p>Shows that linear residual networks converge to the same limit during training, regardless of how width and depth jointly grow to infinity.</p>
       <p class="research-authors"><strong>Ruijia Zhang</strong>, Soufiane Hayou</p>
-      <a class="paper-link" href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">paper <span aria-hidden="true">↗</span></a>
+      <a class="paper-link" href="https://arxiv.org/abs/2610.30729">paper <span aria-hidden="true">↗</span></a>
     </div>
   </article>
 
@@ -86,7 +86,7 @@ My research is driven by a broad interest in the <strong>science of AI</strong>:
 <ol class="publication-list">
   <li>
     <span class="pub-year">2026</span>
-    <span class="pub-entry"><a href="{{ '/papers/commutativity_beyond_initialization.pdf' | relative_url }}">Width and Depth Limits Commute during Training in Linear Residual Networks</a><span class="pub-venue">Submitted to ICLR 2027</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Soufiane Hayou</span></span>
+    <span class="pub-entry"><a href="https://arxiv.org/abs/2610.30729">Width and Depth Limits Commute during Training in Linear Residual Networks</a><span class="pub-venue">arXiv:2610.30729 · Submitted to ICLR 2027</span><span class="pub-authors"><strong>Ruijia Zhang</strong>, Soufiane Hayou</span></span>
   </li>
   <li>
     <span class="pub-year">2026</span>
